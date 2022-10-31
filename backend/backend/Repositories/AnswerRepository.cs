@@ -38,11 +38,13 @@ namespace backend.repositories
             var dbQuestion = await _context.Answers.FindAsync(answer.Id);
             if (dbQuestion != null)
             {
-                dbQuestion.Content = answer.Content;
+                dbQuestion.Description = answer.Description;
                 dbQuestion.Reported = answer.Reported;
                 dbQuestion.Id = answer.Id;
-                dbQuestion.QuestionId = answer.QuestionId;
-                dbQuestion.CreatedAt = answer.CreatedAt;
+                dbQuestion.Question_Id = answer.Question_Id;
+                dbQuestion.DateOfAdded = answer.DateOfAdded;
+                dbQuestion.AmountOfLikes = answer.AmountOfLikes;
+                dbQuestion.Owner_Id = answer.Owner_Id;
               
                 await _context.SaveChangesAsync();
 
