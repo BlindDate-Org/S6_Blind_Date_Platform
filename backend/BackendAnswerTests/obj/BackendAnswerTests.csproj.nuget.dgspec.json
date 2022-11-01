@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {}
+    "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\BackendAnswerTests\\BackendAnswerTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {
+    "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\BackendAnswerTests\\BackendAnswerTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
-        "projectName": "backend",
-        "projectPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\BackendAnswerTests\\BackendAnswerTests.csproj",
+        "projectName": "BackendAnswerTests",
+        "projectPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\BackendAnswerTests\\BackendAnswerTests.csproj",
         "packagesPath": "C:\\Users\\paulm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
+        "outputPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\BackendAnswerTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\paulm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,23 +40,37 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "AutoFixture": {
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[4.17.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[3.1.2, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "xunit": {
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[2.4.1, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[2.4.3, )"
             }
           },
           "imports": [
@@ -71,9 +85,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
