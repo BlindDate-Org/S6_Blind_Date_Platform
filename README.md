@@ -3,6 +3,7 @@
 <h1 align="center"> S6_Blind_Date_Platform </h1>
 <h3 align="center"> Platform created to help visually impaired users! </h3>
 <h5 align="center"> Project Assignment by - <a href="https://fontys.nl">Fontys</a></h5>
+
 ---
 
 <!-- markdownlint-disable -->
