@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {}
+    "D:\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {}
   },
   "projects": {
-    "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {
+    "D:\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+        "projectUniqueName": "D:\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+        "projectPath": "D:\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\goert\\.nuget\\packages\\",
-        "outputPath": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
+        "outputPath": "D:\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\goert\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,7 +56,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
