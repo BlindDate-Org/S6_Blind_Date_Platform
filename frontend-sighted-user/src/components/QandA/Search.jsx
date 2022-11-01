@@ -1,5 +1,10 @@
 import React from 'react'
 import { MagnifyingGlassIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import PostQuestion from './PostQuestion'
+
+const MySwal = withReactContent(Swal)
 
 const Search = () => {
 
@@ -24,10 +29,18 @@ const Search = () => {
           <button type="submit" className="search-btn">Search</button>
         </div>
       </form>
-      <button className='w-fit btn m-2 flex items-center'><PlusCircleIcon className='w-5' />New Question</button>
+      <button onClick={sweetalert} className='w-fit btn m-2 flex items-center'><PlusCircleIcon className='w-5' />New Question</button>
     </div>
   )
+}
 
+function sweetalert() {
+  MySwal.fire({
+    title: <p>Post a Question</p>,
+    html: <PostQuestion />,
+    showCloseButton: true,
+    showConfirmButton: false
+  });
 }
 
 export default Search
