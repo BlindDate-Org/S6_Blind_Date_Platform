@@ -1,7 +1,5 @@
 ﻿using backendquestions.Interfaces;
 using backendquestions.Models;
-using backendquestions.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backendquestions.Controllers
@@ -12,7 +10,7 @@ namespace backendquestions.Controllers
     {
         private readonly IQuestionService _questionService;
 
-        public QuestionController(QuestionService questionService)
+        public QuestionController(IQuestionService questionService)
         {
             _questionService = questionService;
         }

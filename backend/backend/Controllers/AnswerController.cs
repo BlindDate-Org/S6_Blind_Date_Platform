@@ -1,4 +1,6 @@
-﻿using backend.Models;
+﻿using backend.Interfaces;
+using backend.Models;
+using backend.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,66 +10,58 @@ namespace backend.Controllers
     [ApiController]
     public class AnswerController : ControllerBase
     {
-        private readonly DataContext _context;
-        public AnswerController(DataContext context)
+        private readonly IAnswerService _context;
+        public AnswerController(IAnswerService context)
         {
             _context = context;
         }
         [HttpGet]
         public async Task<ActionResult<List<Answer>>> Get()
         {
-            return Ok(await _context.Answers.ToListAsync());
+            return Ok(await _context.GetAllAnswers());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Answer>> Get(Guid id)
         {
-            var answer = await _context.Answers.FindAsync(id);
-            if (answer == null)
-                return BadRequest("Answer");
-            return Ok();
+            var response = await _context.GetAnswerById(id);
+            if (response != null)
+            {
+                return Ok(response);
+            }
+            return NotFound("Answer not found with given id");
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Answer>>> Add(Answer hero)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult<List<Answer>>> Add(Answer answer)
         {
-            _context.Answers.Add(hero);
-            await _context.SaveChangesAsync();
-
-            return Ok(await _context.Answers.ToListAsync());
+            return Ok(await _context.AddAnswer(answer));
         }
 
         [HttpPut]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult<List<Answer>>> UpdateHero(Answer request)
         {
-            var answermodel = await _context.Answers.FindAsync(request.Id);
-            DateTime time = DateTime.Now;
-            if (answermodel == null)
-                return BadRequest("Anser not found.");
-
-            answermodel.Id = request.Id;
-            answermodel.QuestionId = request.QuestionId;
-            time = request.CreatedAt;
-            answermodel.Content = request.Content;
-            answermodel.Reported = request.Reported;
-
-            await _context.SaveChangesAsync();
-
-            return Ok(await _context.Answers.ToListAsync());
+            var response = await _context.UpdateAnswer(request);
+            if (response != null)
+            {
+                return Ok(response);
+            }
+            return BadRequest("Question not found with given id");
         }
 
         [HttpDelete("{id}")]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult<List<Answer>>> Delete(Guid id)
         {
-            var anser = await _context.Answers.FindAsync(id);
-            if (anser == null)
-                return BadRequest("Answer not found.");
+            var Response = await _context.DeleteAnswer(id);
+            if (Response != null)
+            {
+                return Ok(Response);
+            }
 
-            _context.Answers.Remove(anser);
-            await _context.SaveChangesAsync();
-
-            return Ok(await _context.Answers.ToListAsync());
+            return NotFound("Question not found with given id");
         }
-
     }
 }
