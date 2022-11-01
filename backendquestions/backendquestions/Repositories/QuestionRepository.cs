@@ -53,14 +53,14 @@ namespace backendquestions.Repositories
             var dbQuestion = await _context.Questions.FindAsync(request.Id);
             if(dbQuestion != null)
             {
-                dbQuestion.Content = request.Content;
-                dbQuestion.AddedOn = request.AddedOn;
-                dbQuestion.UserId = request.UserId;
-                dbQuestion.FileName = request.FileName;
-                dbQuestion.NumberOfAnswers = request.NumberOfAnswers;
-                dbQuestion.Deleted = request.Deleted;
-                dbQuestion.LinkedInterest = request.LinkedInterest;
-                dbQuestion.Language = request.Language;
+                dbQuestion.Topics = request.Topics;
+                dbQuestion.Title = request.Title;
+                dbQuestion.Description = request.Description;
+                dbQuestion.OwnerId = request.OwnerId;
+                dbQuestion.Answers = request.Answers;
+                dbQuestion.DateOfAdded = request.DateOfAdded;
+                dbQuestion.Reported = request.Reported;
+                dbQuestion.AmountOfLikes = request.AmountOfLikes;
 
                 await _context.SaveChangesAsync();
 
