@@ -48,7 +48,17 @@ namespace BackendAnswerTests.IntergartionTests
             //Assert.NotNull(result);
             result.Should().NotBeNull();
             answerserviceMock.Verify(x => x.GetAnswerById(id), Times.Once());
+        
+
+
 
         }
+
+        [Fact]
+        public async Task GetAllAnswersTest()
+        {
+            answerserviceMock.Verify(x => x.GetAllAnswers(), Times.Once());
+        }
+
     }
 }

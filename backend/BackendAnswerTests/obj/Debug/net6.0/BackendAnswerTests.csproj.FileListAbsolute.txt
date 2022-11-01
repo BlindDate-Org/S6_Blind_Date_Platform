@@ -147,3 +147,6 @@ C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backend\BackendAnswerTest
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backend\BackendAnswerTests\obj\Debug\net6.0\BackendAnswerTests.pdb
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backend\BackendAnswerTests\obj\Debug\net6.0\BackendAnswerTests.genruntimeconfig.cache
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backend\BackendAnswerTests\obj\Debug\net6.0\ref\BackendAnswerTests.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backend\BackendAnswerTests\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backend\BackendAnswerTests\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backend\BackendAnswerTests\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
