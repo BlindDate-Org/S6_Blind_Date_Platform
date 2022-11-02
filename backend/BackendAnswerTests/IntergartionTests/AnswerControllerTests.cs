@@ -53,12 +53,87 @@ namespace BackendAnswerTests.IntergartionTests
 
 
         }
-
         [Fact]
-        public async Task GetAllAnswersTest()
+        public async Task GetAnswersTest()
         {
+            //Scenarios
+
+            //Arrange
+            var questionsDataMock = ifixture.Create<Answer>();//creating a answer by ifixture
+            var id = ifixture.Create<Guid>();
+            var questionId = ifixture.Create<Guid>();
+            var ownerId = ifixture.Create<Guid>();
+
+            Answer answer = new Answer(id, questionId, "In summer dont wear heavy clothes", ownerId, false,
+               new DateTime(2010, 3, 11), 10);
+
+
+            //Act
+            var result = await systemUnderTest.Get().ConfigureAwait(false);
+
+            //Assert
+            //Assert.NotNull(result);
+            result.Should().NotBeNull();
             answerserviceMock.Verify(x => x.GetAllAnswers(), Times.Once());
+
+
+
+
         }
 
+        [Fact]
+        public async Task CreateAnswerTest()
+        {
+            //Scenarios
+
+            //Arrange
+            var questionsDataMock = ifixture.Create<Answer>();//creating a answer by ifixture
+            var id = ifixture.Create<Guid>();
+            var questionId = ifixture.Create<Guid>();
+            var ownerId = ifixture.Create<Guid>();
+
+            Answer answer = new Answer(id, questionId, "In summer dont wear heavy clothes", ownerId, false,
+               new DateTime(2010, 3, 11), 10);
+
+
+            //Act
+            var result = await systemUnderTest.Add(answer).ConfigureAwait(false);
+
+            //Assert
+            //Assert.NotNull(result);
+            result.Should().NotBeNull();
+            answerserviceMock.Verify(x => x.AddAnswer(answer), Times.Once());
+
+
+
+
+        }
+        [Fact]
+        public async Task DeleteAnswerTest()
+        {
+            //Scenarios
+
+            //Arrange
+            var questionsDataMock = ifixture.Create<Answer>();//creating a answer by ifixture
+            var id = ifixture.Create<Guid>();
+            var questionId = ifixture.Create<Guid>();
+            var ownerId = ifixture.Create<Guid>();
+
+            Answer answer = new Answer(id, questionId, "In summer dont wear heavy clothes", ownerId, false,
+               new DateTime(2010, 3, 11), 10);
+
+
+            //Act
+            var result = await systemUnderTest.Delete(id).ConfigureAwait(false);
+
+            //Assert
+            //Assert.NotNull(result);
+            result.Should().NotBeNull();
+            answerserviceMock.Verify(x => x.DeleteAnswer(id), Times.Once());
+
+
+
+
+        }
     }
 }
