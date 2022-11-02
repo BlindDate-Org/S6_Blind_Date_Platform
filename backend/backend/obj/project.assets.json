@@ -2393,19 +2393,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paulm\\.nuget\\packages\\": {}
+    "C:\\Users\\goert\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+      "projectUniqueName": "D:\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\paulm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
+      "projectPath": "D:\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\goert\\.nuget\\packages\\",
+      "outputPath": "D:\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\paulm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\goert\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2469,7 +2469,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
