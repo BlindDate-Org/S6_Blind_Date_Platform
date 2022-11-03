@@ -64,18 +64,18 @@ namespace BackendAnswerTests.IntergartionTests
             var questionId = ifixture.Create<Guid>();
             var ownerId = ifixture.Create<Guid>();
 
-            Answer answer = new Answer(id, questionId, "In summer dont wear heavy clothes", ownerId, false,
-               new DateTime(2010, 3, 11), 10);
+            //Answer answer = new Answer(id, questionId, "In summer dont wear heavy clothes", ownerId, false,
+            //   new DateTime(2010, 3, 11), 10);
 
 
             //Act
             var result = await systemUnderTest.Get().ConfigureAwait(false);
 
             //Assert
-            //Assert.NotNull(result);
+           
             result.Should().NotBeNull();
             answerserviceMock.Verify(x => x.GetAllAnswers(), Times.Once());
-
+           
 
 
 
@@ -135,5 +135,37 @@ namespace BackendAnswerTests.IntergartionTests
 
 
         }
+        [Fact]
+        public async Task UpdateAnswersTest()
+        {
+            //Scenarios
+
+            //Arrange
+            var questionsDataMock = ifixture.Create<Answer>();//creating a answer by ifixture
+            var id = ifixture.Create<Guid>();
+            var questionId = ifixture.Create<Guid>();
+            var ownerId = ifixture.Create<Guid>();
+
+            Answer answer = new Answer(id, questionId, "In summer dont wear heavy clothes", ownerId, false,
+               new DateTime(2010, 3, 11), 10);
+
+         
+
+            //Act
+            var result = await systemUnderTest.UpdateHero(answer);
+
+            //Assert
+
+            //Assert
+            //Assert.NotNull(result);
+            result.Should().NotBeNull();
+            answerserviceMock.Verify(x => x.UpdateAnswer(answer));
+           
+
+
+
+
+        }
+
     }
 }
