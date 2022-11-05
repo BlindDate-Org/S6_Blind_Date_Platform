@@ -28,8 +28,4 @@
     <ProjectReference Include="..\backendquestions\backendquestions.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="IntergrationTests\" />
-  </ItemGroup>
-
 </Project>
