@@ -35,12 +35,6 @@ namespace BackendAnswerTests.ModelTest
             Assert.False(answer.Reported);
             Assert.Equal(10,answer.AmountOfLikes);
 
-
-
-
-
-
-
         }
     }
 }
