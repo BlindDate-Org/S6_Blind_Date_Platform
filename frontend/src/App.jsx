@@ -4,7 +4,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { Home } from './pages';
+import { Home, Questions } from './pages';
 
 function App() {
 
@@ -14,6 +14,8 @@ function App() {
         <Routes>
           {/* Home */}
           <Route exact path="/" element={<Home />} />
+          {/* Questions */}
+          <Route exact path="/questions" element={<Questions />} />
         </Routes>
       </Router>
     </div>
