@@ -3,6 +3,8 @@ using backendquestions.Controllers;
 using backendquestions.Interfaces;
 using backendquestions.Models;
 using FluentAssertions;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.TestPlatform.Utilities;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -191,9 +193,29 @@ namespace BackendQuestionTests.IntergrationTests
             result.Should().NotBeNull();
             questionserviceMock.Verify(x => x.UpdateQuestion(question));
 
+        }
+        //UNSUCCESSFUL SCENARIOS
 
+        //should return not found when no data Found
 
+        [Fact]
+        public async Task GetQuestionById_Should_RetrunNotFound_WhenNoFoundAnswerById()
+        {
+            //Arrange
 
+            Question? questionNotFound = null;
+            var id = ifixture.Create<Guid>();
+            questionserviceMock.Setup(x => x.GetQuestionById(id)).ReturnsAsync(questionNotFound);
+
+            //Act
+            var result = await systemUnderTest.GetQuestionById(id).ConfigureAwait(false);
+
+            //ASSERT
+
+           // result.Should().NotBeNull();
+            Assert.Null(questionNotFound);
+            //result.Result.Should().BeAssignableTo<NotFoundResult>();
+            questionserviceMock.Verify(x => x.GetQuestionById(id), Times.Once());
 
         }
 

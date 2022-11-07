@@ -147,3 +147,12 @@ C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQ
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\obj\Debug\net6.0\BackendQuestionTests.pdb
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\obj\Debug\net6.0\BackendQuestionTests.genruntimeconfig.cache
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\obj\Debug\net6.0\ref\BackendQuestionTests.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\BackendQuestionTests\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

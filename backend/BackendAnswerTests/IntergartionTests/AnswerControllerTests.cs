@@ -59,7 +59,7 @@ namespace BackendAnswerTests.IntergartionTests
             //Scenarios
 
             //Arrange
-            var questionsDataMock = ifixture.Create<Answer>();//creating a answer by ifixture
+            var answersDataMock = ifixture.Create<Answer>();//creating a answer by ifixture
             var id = ifixture.Create<Guid>();
             var questionId = ifixture.Create<Guid>();
             var ownerId = ifixture.Create<Guid>();
@@ -164,6 +164,26 @@ namespace BackendAnswerTests.IntergartionTests
 
 
 
+
+        }
+
+        [Fact]
+        public async Task GetAnswerById_Should_RetrunNotFound_WhenNoFoundAnswerById()
+        {
+            //Arrange
+
+            Answer? answerNotFound = null;
+            var id = ifixture.Create<Guid>();
+            answerserviceMock.Setup(x => x.GetAnswerById(id)).ReturnsAsync(answerNotFound);
+
+            //Act
+            var result = await systemUnderTest.Get(id).ConfigureAwait(false);
+
+            //ASSERT
+
+            // result.Should().NotBeNull();
+            Assert.Null(answerNotFound);
+            answerserviceMock.Verify(x => x.GetAnswerById(id), Times.Once());
 
         }
 
