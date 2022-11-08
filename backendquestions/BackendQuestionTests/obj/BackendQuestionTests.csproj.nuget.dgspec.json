@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj": {}
+    "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj": {
+    "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj",
+        "projectUniqueName": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj",
         "projectName": "backendquestions",
-        "projectPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj",
-        "packagesPath": "C:\\Users\\paulm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\obj\\",
+        "projectPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj",
+        "packagesPath": "C:\\Users\\luca_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\paulm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luca_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,8 +70,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -78,21 +82,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj": {
+    "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj",
+        "projectUniqueName": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj",
         "projectName": "BackendQuestionTests",
-        "projectPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj",
-        "packagesPath": "C:\\Users\\paulm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\obj\\",
+        "projectPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\BackendQuestionTests.csproj",
+        "packagesPath": "C:\\Users\\luca_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\BackendQuestionTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\paulm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luca_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,8 +115,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj": {
-                "projectPath": "C:\\Users\\paulm\\Documents\\GitHub\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj"
+              "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj": {
+                "projectPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backendquestions\\backendquestions\\backendquestions.csproj"
               }
             }
           }
@@ -165,8 +174,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -175,7 +183,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
