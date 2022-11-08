@@ -1,0 +1,16 @@
+services:
+  backend:
+    build:
+      context: D:\S6_Blind_Date_Platform\backend
+      dockerfile: backend/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: backend
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\goert\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\goert\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
