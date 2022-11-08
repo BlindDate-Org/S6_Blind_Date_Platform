@@ -12,8 +12,8 @@ using backend.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221018093058_AnswerMigration")]
-    partial class AnswerMigration
+    [Migration("20221108124139_CreateInitial")]
+    partial class CreateInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,13 +30,19 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("AmountOfLikes")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("DateOfAdded")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("QuestionId")
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Owner_Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("Question_Id")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("Reported")

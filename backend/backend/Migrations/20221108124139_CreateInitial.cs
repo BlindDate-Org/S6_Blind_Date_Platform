@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace backend.Migrations
 {
-    public partial class AnswerMigration : Migration
+    public partial class CreateInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,10 +14,12 @@ namespace backend.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    QuestionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Reported = table.Column<bool>(type: "bit", nullable: false)
+                    Question_Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Owner_Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Reported = table.Column<bool>(type: "bit", nullable: false),
+                    DateOfAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    AmountOfLikes = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
