@@ -2,6 +2,23 @@
 {
     public class Answer
     {
+        public Answer(Guid id, Guid question_Id, string? description, Guid owner_Id, bool reported, DateTime dateOfAdded, int amountOfLikes)
+        {
+            Id = id;
+            Question_Id = question_Id;
+            Description = description;
+            Owner_Id = owner_Id;
+            Reported = reported;
+            DateOfAdded = dateOfAdded;
+            AmountOfLikes = amountOfLikes;
+        }
+
+        //Mary added constructor to initialize answer needed for testing the object
+
+
+
+
+
         public Guid Id { get; set; }
         public Guid Question_Id{ get; set; }
         public string? Description { get; set; }
