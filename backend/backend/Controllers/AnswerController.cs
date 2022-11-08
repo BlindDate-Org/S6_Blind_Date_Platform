@@ -33,14 +33,14 @@ namespace backend.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult<List<Answer>>> Add(Answer answer)
         {
             return Ok(await _context.AddAnswer(answer));
         }
 
         [HttpPut]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult<List<Answer>>> UpdateHero(Answer request)
         {
             var response = await _context.UpdateAnswer(request);
@@ -52,7 +52,7 @@ namespace backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult<List<Answer>>> Delete(Guid id)
         {
             var Response = await _context.DeleteAnswer(id);
