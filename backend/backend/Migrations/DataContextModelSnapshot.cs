@@ -28,13 +28,19 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("AmountOfLikes")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("DateOfAdded")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("QuestionId")
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Owner_Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("Question_Id")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("Reported")
