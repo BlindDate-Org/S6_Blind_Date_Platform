@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navlink {
+    @apply flex-1 text-center w-8 hover:text-cyan-600 font-mono font-bold;
+  }
+  .navlink-mobile {
+    @apply block text-center w-auto hover:text-cyan-600 font-mono font-bold px-4 py-2 hover:bg-gray-100 text-gray-900;
+  }
+  .main-content {
+    @apply w-11/12 overflow-auto px-7 h-[80vh];
+  }
+  .search-btn {
+    @apply text-white absolute right-2.5 bottom-2.5 bg-cyan-500 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2;
+  }
+  .btn {
+    @apply text-white bg-cyan-500 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2;
+  }
+  .topicTag {
+    @apply text-xs inline-flex items-center font-bold leading-3 uppercase px-3 mx-1 py-1 bg-blue-200 text-cyan-700 rounded-full;
+  }
+}
+html {
+  background-color: #f0fdfa;
+}
