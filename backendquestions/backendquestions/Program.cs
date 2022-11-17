@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 //Dependency injection
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
-builder.Services.AddScoped<QuestionService>();
+builder.Services.AddScoped<IQuestionService ,QuestionService>();
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
