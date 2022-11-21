@@ -95,7 +95,7 @@ Testers where:
 <h2 id="Detailed test results"> :file_folder: 3.Detailed test results</h2>
 <br/>
 
-<table align="center" class="no-border" style="display:block" >
+<table align="center" class="no-border" style="table-layout": auto; >
     <tr>
         <th>Test ID</th>
         <th>TC-01</th>
@@ -125,7 +125,7 @@ Testers where:
         <th></th>
         <th></th>
     </tr>
-        <tr>
+    <tr>
         <th>Test output</th>
         <th>
             <ul>
@@ -135,8 +135,7 @@ Testers where:
         <th></th>
         <th></th>
     </tr>
-    </tr>
-        <tr>
+    <tr>
         <th>Assumptions and constraints</th>
         <th>
             <ul>
@@ -146,8 +145,7 @@ Testers where:
         <th></th>
         <th></th>
     </tr>
-    </tr>
-        <tr>
+    <tr>
         <th>Expected results and criteria</th>
         <th>
             <ul>
@@ -158,16 +156,106 @@ Testers where:
         <th></th>
     </tr>
     <tr>
-        <th><strong>Test procedure</strong></th>
+        <th><b>Test procedure</b></th>
         <th></th>
         <th></th>
         <th></th>
     </tr>
-        <tr>
-        <th></th>
+    <tr>
+        <th>Step number</th>
+        <th>Operator actions</th>
+        <th>Expected result and evaluation criteria</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>1.</th>
         <th></th>
         <th></th>
         <th></th>
     </tr>
 </table>
+
+<br/>
+<!-- Table number 2 -->
+<table align="center" class="no-border" style="table-layout": auto; >
+    <tr>
+        <th>Test ID</th>
+        <th>TC-02</th>
+        <th>Comment</th>
+        <th>Decision</th>
+    </tr>
+    <tr>
+        <th>Test description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>User requirement</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Test input</th>
+        <th>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Test output</th>
+        <th>
+            <ul>
+                <li></li>
+            </ul>
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Assumptions and constraints</th>
+        <th>
+            <ul>
+                <li></li>
+            </ul>
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Expected results and criteria</th>
+        <th>
+            <ul>
+                <li></li>
+            </ul>
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><b>Test procedure</b></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Step number</th>
+        <th>Operator actions</th>
+        <th>Expected result and evaluation criteria</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>1.</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+</table>
+
+
 
