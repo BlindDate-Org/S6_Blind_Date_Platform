@@ -48,15 +48,15 @@
 <!-- ABOUT THE PROJECT -->
 <h2 id="References"> :paperclip: 1.2 Project references</h2>
 
-<table align="center" class="no-border" >
+<table width:"200%" class="no-border" >
     <tr>
-        <th>#</th>
-        <th>Document Identifier</th>
-        <th>Document title</th>
+        <th>#&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th>Document Identifier &nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th>Document title &nbsp;&nbsp;&nbsp;&nbsp;</th>
     </tr>
     <tr>
         <td>[ 1. ]</td>
-        <td>Backend - Answer functionality</td>
+        <td><p>Backend - Answer functionality</p></td>
         <td><a href="https://github.com/BlindDate-Org/S6_Blind_Date_Platform/tree/main/backend/BackendAnswerTests">Github - Answer</a></td>
     </tr>
     <tr>
@@ -72,18 +72,40 @@
 <br/>
 <h4>2.1 Tests Logs</h4>
 <p>Give a few information about tests.
-The project software got tested throughout the semester localy test platform located in xxx, from the yyyy/mm/dd to the yyyy/mm/dd. The tests of the test phase (ref. software test plan) where executed.
+The project software got tested throughout the semester. The tests where performed on the local machine from 31-10-2022 to the 15-01-2023. 
 Testers where:
 <ul>
-  <li></li>
+  <li>Mary Joseph</li>
   <li></li>
 </ul>
 
 </p>
 <br/>
 
-<h4>2.2 Reationale for decision</h4>
-
+<h4>2.2 Rationale for decision</h4>
+After executing a test, the decision is defined according to the following rules:
+<ul>
+    </br>
+    <li>
+        OK: The test sheet is set to "OK" state when all steps are in "OK" state. The real result is compliant to the expected result.
+    </li>
+    </br>
+    <li>
+        NOK: The test sheet is set to "NOK" state when all steps of the test are set to "NOK" state or when the result of a step differs from the expected result.
+    </li>
+    </br>
+    <li>
+        Partial OK: The test sheet is set to "Partial OK" state when at least one step of the test is set to "NOK" state or when the result of a step is partially compliant to the expected result. Keep it or remove. Source of inconsistencies: criteria to set if result is Partial OK may be qualitative
+    </li>
+    </br>
+    <li>
+        NOT RUN: Default state of a test sheet not yet executed.
+    </li>
+    </br>
+    <li>
+	    NOT COMPLETED: The test sheet is set to "Not Completed" state when at least one step of the test is set "Not Run" state.
+    </li>
+</ul>
 <br/>
 
 <h4>2.3	Overall assessment of tests</h4>
@@ -95,167 +117,29 @@ Testers where:
 <h2 id="Detailed test results"> :file_folder: 3.Detailed test results</h2>
 <br/>
 
-<table align="center" class="no-border" style="table-layout": auto; >
-    <tr>
-        <th>Test ID</th>
-        <th>TC-01</th>
-        <th>Comment</th>
-        <th>Decision</th>
-    </tr>
-    <tr>
-        <th>Test description</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>User requirement</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Test input</th>
-        <th>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Test output</th>
-        <th>
-            <ul>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Assumptions and constraints</th>
-        <th>
-            <ul>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Expected results and criteria</th>
-        <th>
-            <ul>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th><b>Test procedure</b></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Step number</th>
-        <th>Operator actions</th>
-        <th>Expected result and evaluation criteria</th>
-        <th>Result</th>
-    </tr>
-    <tr>
-        <th>1.</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-</table>
+|  Test ID                      	|    TC-01         	|    Comment                              	|    Decision    	|
+|-------------------------------	|------------------	|-----------------------------------------	|----------------	|
+| User requirement              	|                  	|                                         	|                	|
+| Test input                    	|                  	|                                         	|                	|
+| Test output                   	|                  	|                                         	|                	|
+| Assumptions and constraints   	|                  	|                                         	|                	|
+| Expected results and criteria 	|                  	|                                         	|                	|
+| Test procedure                	|                  	|                                         	|                	|
+| Step number                   	| Operator actions 	| Expected result and evaluation criteria 	| Result         	|
+| 1.                            	|                  	|                                         	|                	|
+|                               	|                  	|                                         	|                	|
 
 <br/>
 <!-- Table number 2 -->
-<table align="center" class="no-border" style="table-layout": auto; >
-    <tr>
-        <th>Test ID</th>
-        <th>TC-02</th>
-        <th>Comment</th>
-        <th>Decision</th>
-    </tr>
-    <tr>
-        <th>Test description</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>User requirement</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Test input</th>
-        <th>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Test output</th>
-        <th>
-            <ul>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Assumptions and constraints</th>
-        <th>
-            <ul>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Expected results and criteria</th>
-        <th>
-            <ul>
-                <li></li>
-            </ul>
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th><b>Test procedure</b></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <th>Step number</th>
-        <th>Operator actions</th>
-        <th>Expected result and evaluation criteria</th>
-        <th>Result</th>
-    </tr>
-    <tr>
-        <th>1.</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-</table>
 
-
-
+|  Test ID                      	|    TC-02         	|    Comment                              	|    Decision    	|
+|-------------------------------	|------------------	|-----------------------------------------	|----------------	|
+| User requirement              	|                  	|                                         	|                	|
+| Test input                    	|                  	|                                         	|                	|
+| Test output                   	|                  	|                                         	|                	|
+| Assumptions and constraints   	|                  	|                                         	|                	|
+| Expected results and criteria 	|                  	|                                         	|                	|
+| Test procedure                	|                  	|                                         	|                	|
+| Step number                   	| Operator actions 	| Expected result and evaluation criteria 	| Result         	|
+| 1.                            	|                  	|                                         	|                	|
+|                               	|                  	|                                         	|                	|
