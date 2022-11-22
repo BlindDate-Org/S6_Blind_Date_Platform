@@ -1,6 +1,42 @@
-<img src="https://raw.githubusercontent.com/Ruitjes/blind-date/main/assets/logo.png" alt="SeeThrough Logo" title="SeeThrough" align="right" height="60" />
 
-# SeeThrough
+---
+
+<a name="readme-top"></a>
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a>
+    <img src="https://raw.githubusercontent.com/Ruitjes/blind-date/main/assets/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Blind-date</h3>
+
+  <p align="center">
+    App for visually impaired users!
+    <br />
+    <a href="https://github.com/BlindDate-Org/S6_Blind_Date_Platform/tree/main/documentation"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="">View Demo</a>
+    ·
+    <a href="https://github.com/BlindDate-Org/S6_Blind_Date_Platform/issues">Report Bug</a>
+    
+  </p>
+</div>
+
+---
+
+# Project Description
 
 SeeThrough is Q & A Platform with Tinder flavours,
 Users can ask questions in selected communities and can answer them through a personalized question feed.<br/>
@@ -10,14 +46,12 @@ The stakeholders goals are defined as follows:
 - Can technology help visually impaired people with asking difficult and intimate questions?
 - How do people respond and use this developed app?
 
-Furthermore SeeThrough has been built with scalability in mind meaning an Event driven microservices architecture was the chosen approach.
-This architecture has been deployed in a [Kubernetes](https://kubernetes.io/) cluster.
-
-
-
 ---
 
-<!-- markdownlint-disable -->
+
+
+
+# Current Health checks
 <p align="center"> 
   <a  href = "https://sonarcloud.io/summary/new_code?id=BlindDate-Org_S6_Blind_Date_Platform"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud"/>
   </a>
@@ -32,5 +66,5 @@ This architecture has been deployed in a [Kubernetes](https://kubernetes.io/) cl
 </table>
 
 ---
+
 <br/>
-<h1>hello</h1>
