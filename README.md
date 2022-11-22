@@ -51,7 +51,7 @@ The stakeholders goals are defined as follows:
 
 
 
-# Current Health checks
+# :syringe: Current Health checks
 <p align="center"> 
   <a  href = "https://sonarcloud.io/summary/new_code?id=BlindDate-Org_S6_Blind_Date_Platform"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud"/>
   </a>
@@ -69,11 +69,36 @@ The stakeholders goals are defined as follows:
 
 <br/>
 
-### Built With
+### :hammer_and_wrench: Languages and Tools :
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![React][React.js]][React-url]
-* [![CSharp][CSharp.com]][CSharp-url]
+<div>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/csharp/csharp-original.svg" title="Csharp" alt="Csharp" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/dotnetcore/dotnetcore-original.svg" title="dotnet" alt="dotnet" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" title="MySQL"  alt="MySQL" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/docker/docker-original.svg" title="Docker" alt="Docker" width="40" height="40"/>&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/github/github-original.svg" title="Git" **alt="Git" width="40" height="40"/>
+</div>
+
+---
+
+Maintainers SEP 2022 - JAN 2023
+-----------
+
+Current maintainers:
+ * Luca Bülles (ICT & Software) 
+ * Mark Goertz (ICT & Software) 
+ * Mary Joseph (ICT & Software) 
+ * Gijs Rongen (ICT & Software)
+ * Shenghang Zhu (ICT & Software)
+
+This project is an assignment of:
+ * Fontys: University of Applied Science
+  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
