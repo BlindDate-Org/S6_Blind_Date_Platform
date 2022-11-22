@@ -48,14 +48,9 @@ The stakeholders goals are defined as follows:
 
 ---
 
-
-
-
 # :syringe: Current Health checks
-<p align=""> 
 
-</p>
-
+<br/>
 <table align="center" class="no-border" >
   <tr>
     <td> <a href = "https://sonarcloud.io/summary/new_code?id=BlindDate-Org_S6_Blind_Date_Platform"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud"/>
