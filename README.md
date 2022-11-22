@@ -3,15 +3,6 @@
 
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -46,6 +37,8 @@ The stakeholders goals are defined as follows:
 - Can technology help visually impaired people with asking difficult and intimate questions?
 - How do people respond and use this developed app?
 
+<br/>
+
 ---
 
 # :syringe: Current Health checks
@@ -60,16 +53,15 @@ The stakeholders goals are defined as follows:
     <td><img src="https://github.com/BlindDate-Org/S6_Blind_Date_Platform/actions/workflows/sonarcloud.yml/badge.svg" alt="Sonarcloud"/></td>
   </tr>
 </table>
+<br/>
 
 ---
 
-<br/>
 
 ### :hammer_and_wrench: Languages and Tools :
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-<br/>
 <div align=center>
   <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/csharp/csharp-original.svg" title="Csharp" alt="Csharp" width="60" height="60"/>&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/react/react-original-wordmark.svg" title="React" alt="React" width="60" height="60"/>&nbsp;
@@ -90,13 +82,23 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ### Maintainers SEP 2022 - JAN 2023
 </div>
 
------------
+---
 
- * Luca Bülles (ICT & Software) 
- * Mark Goertz (ICT & Software) 
- * Mary Joseph (ICT & Software) 
- * Gijs Rongen (ICT & Software)
- * Shenghang Zhu (ICT & Software)
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a><img src="https://avatars.githubusercontent.com/u/57712559?v=4" width="100px;" alt="Luca Bulles"/><br /><sub><b>Luca Bulles</b></a></td>
+      <td align="center"><a><img src="https://avatars.githubusercontent.com/u/58692211?v=4" width="100px;" alt="Mark Goertz"/><br /><sub><b>Mark Goertz</b></a></td>
+      <td align="center"><a><img src="https://avatars.githubusercontent.com/u/105490429?v=4" width="100px;" alt="Mary Joseph"/><br /><sub><b>Mary Joseph</b></a></td>    
+    </tr> 
+    <tr>
+    <td align="center"><a><img src="https://avatars.githubusercontent.com/u/67240191?v=4" width="100px;" alt="Shenghang Zhu"/><br /><sub><b>Shenghang Zhu</b></a></td>
+    <td align="center"><a><img src="https://avatars.githubusercontent.com/u/24917075?v=4" width="100px;" alt="Gijs Rongen"/><br /><sub><b>Gijs Rongen</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
+---
 
 <div align=center>
 This project is an assignment of:
