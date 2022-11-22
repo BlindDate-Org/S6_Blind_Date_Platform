@@ -52,13 +52,14 @@ The stakeholders goals are defined as follows:
 
 
 # :syringe: Current Health checks
-<p align="center"> 
-  <a  href = "https://sonarcloud.io/summary/new_code?id=BlindDate-Org_S6_Blind_Date_Platform"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud"/>
-  </a>
+<p align=""> 
+
 </p>
 
 <table align="center" class="no-border" >
   <tr>
+    <td> <a href = "https://sonarcloud.io/summary/new_code?id=BlindDate-Org_S6_Blind_Date_Platform"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud"/>
+  </a></td>
     <td><img src="https://github.com/BlindDate-Org/S6_Blind_Date_Platform/actions/workflows/dotnet.yml/badge.svg" alt="C# Questions health"/></td>
     <td><img src="https://github.com/BlindDate-Org/S6_Blind_Date_Platform/actions/workflows/node.js.yml/badge.svg" alt="Node.js frontend health"/></td>
     <td><img src="https://github.com/BlindDate-Org/S6_Blind_Date_Platform/actions/workflows/sonarcloud.yml/badge.svg" alt="Sonarcloud"/></td>
@@ -89,18 +90,22 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ---
 
-Maintainers SEP 2022 - JAN 2023
+<div align=center>
+
+### Maintainers SEP 2022 - JAN 2023
+</div>
+
 -----------
 
-Current maintainers:
  * Luca Bülles (ICT & Software) 
  * Mark Goertz (ICT & Software) 
  * Mary Joseph (ICT & Software) 
  * Gijs Rongen (ICT & Software)
  * Shenghang Zhu (ICT & Software)
 
+<div align=center>
 This project is an assignment of:
- * Fontys: University of Applied Science
-  
+Fontys: University of Applied Science
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
