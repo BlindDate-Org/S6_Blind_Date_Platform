@@ -132,14 +132,17 @@ After executing a test, the decision is defined according to the following rules
 <br/>
 <!-- Table number 2 -->
 
-|  Test ID                      	|    TC-02         	|    Comment                              	|    Decision    	|
-|-------------------------------	|------------------	|-----------------------------------------	|----------------	|
-| User requirement              	|                  	|                                         	|                	|
-| Test input                    	|                  	|                                         	|                	|
-| Test output                   	|                  	|                                         	|                	|
-| Assumptions and constraints   	|                  	|                                         	|                	|
-| Expected results and criteria 	|                  	|                                         	|                	|
-| Test procedure                	|                  	|                                         	|                	|
-| Step number                   	| Operator actions 	| Expected result and evaluation criteria 	| Result         	|
-| 1.                            	|                  	|                                         	|                	|
-|                               	|                  	|                                         	|                	|
+|  Test ID                      	|    TC-02          	|    Comment                              	 |    Decision    	|
+|-------------------------------	|------------------ 	|--------------------------------------------|------------------|
+| User requirement              	|                   	|                                            |                	|
+| Test input                    	|                   	|                                            |                	|
+| Test output                   	|                   	|                                            |                	|
+| Assumptions and constraints   	|                   	|                                            |                	|
+| Expected results and criteria 	|                   	|                                            |                	|
+| Test procedure                	|                   	|                                         	 |                	|
+| **Step number**                	|**Operator actions** |**Expected result and evaluation criteria** |     **Result**   |
+| 1.                            	|                   	|                                         	 |                	|
+| 2.                            	|                   	|                                            |                	|
+| 3.                            	|                   	|                                            |                	|
+| 4.                            	|                   	|                                            |                	|
+| 5.                              |                   	|                                            |                	|
