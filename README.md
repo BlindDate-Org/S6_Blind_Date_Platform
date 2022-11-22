@@ -84,14 +84,12 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ---
 
-<table>
+<table align=center>
   <tbody>
     <tr>
       <td align="center"><a><img src="https://avatars.githubusercontent.com/u/57712559?v=4" width="100px;" alt="Luca Bulles"/><br /><sub><b>Luca Bulles</b></a></td>
       <td align="center"><a><img src="https://avatars.githubusercontent.com/u/58692211?v=4" width="100px;" alt="Mark Goertz"/><br /><sub><b>Mark Goertz</b></a></td>
       <td align="center"><a><img src="https://avatars.githubusercontent.com/u/105490429?v=4" width="100px;" alt="Mary Joseph"/><br /><sub><b>Mary Joseph</b></a></td>    
-    </tr> 
-    <tr>
     <td align="center"><a><img src="https://avatars.githubusercontent.com/u/67240191?v=4" width="100px;" alt="Shenghang Zhu"/><br /><sub><b>Shenghang Zhu</b></a></td>
     <td align="center"><a><img src="https://avatars.githubusercontent.com/u/24917075?v=4" width="100px;" alt="Gijs Rongen"/><br /><sub><b>Gijs Rongen</b></a></td>
     </tr>
