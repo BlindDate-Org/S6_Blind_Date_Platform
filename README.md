@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a>
-    <img src="https://raw.githubusercontent.com/Ruitjes/blind-date/main/assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/Ruitjes/blind-date/main/assets/logo.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Blind-date</h3>
