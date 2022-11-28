@@ -1,7 +1,7 @@
 import BaseHttpService from './BaseHttpService';
 
 
-const FakeQuestionList = [{
+export const FakeQuestionList = [{
   "id": "e3e098b5-6691-40b8-b1ff-ef5742e10e72",
   "topics": ["Game","Tech"],
   "title": "Date with an Angel",

@@ -13,11 +13,11 @@ const FeedQuestionItem = ({ id, title, topics = [], answers }) => {
         <h1 className='text-2xl'>{title}</h1>
         {/* List of topic tags */}
         <div>
-          {topics.map((topic, _) => {
+          {topics?.map((topic, _) => {
             return <div key={_} className='topicTag'>{topic}</div>
           })}
         </div>
-        {answers.map(answer => {
+        {answers?.map(answer => {
           return <div key={answer.id}>
             {/* User information */}
             <div className='p-2 flex items-center'><UserCircleIcon className='w-8' />{answer.username}</div>
