@@ -184,3 +184,8 @@ C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\backendq
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\backendquestions.pdb
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\backendquestions.genruntimeconfig.cache
 C:\Users\paulm\Documents\GitHub\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\ref\backendquestions.dll
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\staticwebassets\msbuild.backendquestions.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\staticwebassets\msbuild.build.backendquestions.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.backendquestions.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.backendquestions.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backendquestions\backendquestions\obj\Debug\net6.0\staticwebassets.pack.json
