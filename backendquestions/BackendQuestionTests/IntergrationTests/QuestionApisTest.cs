@@ -22,8 +22,6 @@ namespace BackendQuestionTests.IntergrationTests
         private readonly QuestionController systemUnderTest;
 
         //Constructor
-      
-           
         public QuestionApisTest()
         {
             ifixture = new Fixture();
@@ -31,11 +29,8 @@ namespace BackendQuestionTests.IntergrationTests
             systemUnderTest = new QuestionController(questionserviceMock.Object);
 
         }
- 
 
-      
         //test 2 getby id
-
         [Fact]
         public async Task GetQuestionById()
         {
@@ -96,18 +91,14 @@ namespace BackendQuestionTests.IntergrationTests
             string answer1 = "In summer dont wear heavy clothes";
             string answer2 = "Always be careful when meeting new people";
 
-            List<string> answers = new List<string>();
-            answers.Add(answer1);
-            answers.Add(answer2);
+            string answers = "Good Answer is written with text!";
+ 
 
-            List<string> topics = new List<string>();
+            string topics = "Fasion";
 
             var topicId1 = ifixture.Create<Guid>();
             var topicId2 = ifixture.Create<Guid>();
-            string topic1 = "Eating";
-            string topic2 =  "Shopping";
-            topics.Add(topic1);
-            topics.Add(topic2);
+ 
 
 
 
@@ -141,9 +132,6 @@ namespace BackendQuestionTests.IntergrationTests
             result.Should().NotBeNull();
             questionserviceMock.Verify(x => x.DeleteQuestion(questionId), Times.Once());
 
-
-
-
         }
         [Fact]
         public async Task UpdateQuestionsTest()
@@ -160,28 +148,18 @@ namespace BackendQuestionTests.IntergrationTests
             // var question_Id = ifixture.Create<Guid>();
             var ownerId2 = ifixture.Create<Guid>();
 
-
             string answer1 = "In summer dont wear heavy clothes";
             string answer2 = "Always be careful when meeting new people";
 
-            List<string> answers = new List<string>();
-            answers.Add(answer1);
-            answers.Add(answer2);
-
-            List<string> topics = new List<string>();
+            string answers = "Test this answer now!";
+            string topics = "Fashion";
 
             var topicId1 = ifixture.Create<Guid>();
             var topicId2 = ifixture.Create<Guid>();
             string topic1 = "Eating";
             string topic2 = "Shopping";
-            topics.Add(topic1);
-            topics.Add(topic2);
-
-
 
             Question question = new Question(questionId, topics, "Restaurant", "Looking for a nice restaurant for nice food", ownerId, answers, new DateTime(2010, 3, 11), false, 10);
-
-
 
             //Act
             var result = await systemUnderTest.UpdateQuestion(question);
@@ -194,7 +172,7 @@ namespace BackendQuestionTests.IntergrationTests
             questionserviceMock.Verify(x => x.UpdateQuestion(question));
 
         }
-        //UNSUCCESSFUL SCENARIOS
+        //-----------------------------------------------------------------UNSUCCESSFUL SCENARIOS --------------------------------------------------------------------------------------------------------
 
         //should return not found when no data Found
 
