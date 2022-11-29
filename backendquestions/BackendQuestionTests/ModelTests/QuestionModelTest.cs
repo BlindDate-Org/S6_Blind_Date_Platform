@@ -16,7 +16,7 @@ namespace BackendQuestionTests.ModelTests
         public void ConstructorTest()
         {
             //Arrange
-               var questionId = ifixture.Create<Guid>();
+            var questionId = ifixture.Create<Guid>();
             var ownerId = ifixture.Create<Guid>();
             //Arrange
             var answerid = ifixture.Create<Guid>();
@@ -25,22 +25,11 @@ namespace BackendQuestionTests.ModelTests
            // var question_Id = ifixture.Create<Guid>();
             var ownerId2 = ifixture.Create<Guid>();
 
-         
-        Answer answer1 = new Answer(answerid,  "In summer dont wear heavy clothes",ownerId);
-        Answer answer2 = new Answer(answerid2, "Always be careful when meeting new people", ownerId2);
+            string answers = "Best clothing is heavy clothing";
+            string topics = "Fashion";
 
-            List<Answer> answers = new List<Answer>();
-            answers.Add(answer1);
-            answers.Add(answer2);
-
-            List<Topic> topics = new List<Topic>();
-
-            var topicId1 = ifixture.Create<Guid>();
-            var topicId2 = ifixture.Create<Guid>();
-            Topic topic1 = new Topic(topicId1, "Eating");
-            Topic topic2 = new Topic(topicId2, "Shopping");
-            topics.Add(topic1);
-            topics.Add(topic2);
+            string topic1 = "Eating";
+            string topic2 = "Shopping";
 
             
 
