@@ -753,3 +753,11 @@ sketch\par
 # Additional files built by Visual Studio\par
 \par
 # End of {{\field{\*\fldinst{HYPERLINK https://www.toptal.com/developers/gitignore/api/react,csharp,visualstudio,visualstudiocode,node }}{\fldrslt{https://www.toptal.com/developers/gitignore/api/react,csharp,visualstudio,visualstudiocode,node\ul0\cf0}}}}\f0\fs22\par
+**/.vs/
+
+**/bin
+**/bin
+
+**/obj
+**/obj
+.DS_Store
