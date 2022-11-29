@@ -8,19 +8,6 @@ export default class BaseHttpService {
     this.routerStore = routerStore;
   }
 
-  /*async get(endpoint, options = {}) {
-    Object.assign(options, this._getCommonOptions());
-
-    await axios.get(`${this.BASE_URL}/${endpoint}`, options)
-      .then(function (response) {
-        const responseData = JSON.parse(response.data);
-        console.log("response:", response.data);
-        console.log("response parse:", responseData);
-        return responseData;
-      })
-      .catch((error) => this._handleHttpError(error));
-  }*/
-
   async get(endpoint, options = {}) {
     Object.assign(options, this._getCommonOptions());
 

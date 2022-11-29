@@ -93,22 +93,17 @@ namespace BackendQuestionTests.IntergrationTests
             var ownerId2 = ifixture.Create<Guid>();
 
 
-            Answer answer1 = new Answer(answerid, "In summer dont wear heavy clothes", ownerId);
-            Answer answer2 = new Answer(answerid2, "Always be careful when meeting new people", ownerId2);
+            string answer1 = "In summer dont wear heavy clothes";
+            string answer2 = "Always be careful when meeting new people";
 
-            List<Answer> answers = new List<Answer>();
-            answers.Add(answer1);
-            answers.Add(answer2);
+            string answers = "Best question ever!";
 
-            List<Topic> topics = new List<Topic>();
+            string topics = "Fashion";
 
             var topicId1 = ifixture.Create<Guid>();
             var topicId2 = ifixture.Create<Guid>();
-            Topic topic1 = new Topic(topicId1, "Eating");
-            Topic topic2 = new Topic(topicId2, "Shopping");
-            topics.Add(topic1);
-            topics.Add(topic2);
-
+            string topic1 = "Eating";
+            string topic2 = "Shopping";
 
 
             Question question = new Question(questionId, topics, "Restaurant", "Looking for a nice restaurant for nice food", ownerId, answers, new DateTime(2010, 3, 11), false, 10);
@@ -161,21 +156,14 @@ namespace BackendQuestionTests.IntergrationTests
             var ownerId2 = ifixture.Create<Guid>();
 
 
-            Answer answer1 = new Answer(answerid, "In summer dont wear heavy clothes", ownerId);
-            Answer answer2 = new Answer(answerid2, "Always be careful when meeting new people", ownerId2);
+            string answer1 = "In summer dont wear heavy clothes";
+            string answer2 = "Always be careful when meeting new people";
 
-            List<Answer> answers = new List<Answer>();
-            answers.Add(answer1);
-            answers.Add(answer2);
+            string answers = "Test answer";
 
-            List<Topic> topics = new List<Topic>();
-
-            var topicId1 = ifixture.Create<Guid>();
-            var topicId2 = ifixture.Create<Guid>();
-            Topic topic1 = new Topic(topicId1, "Eating");
-            Topic topic2 = new Topic(topicId2, "Shopping");
-            topics.Add(topic1);
-            topics.Add(topic2);
+            string topics = "Fashion";
+            string topic1 = "Eating";
+            string topic2 = "Shopping";
 
 
 

@@ -9,9 +9,19 @@ export class QuestionService extends BaseHttpService {
     return myFeedQuestion;
   }
   
-  async PostQuestion(question, topic, description) {
-    const myFeedQuestion = this.post("api/Question/", {"title": question, "topic": topic,"description": description});
+  async PostQuestion(question, topics, description) {
+    const myFeedQuestion = this.post("api/Question/", {"title": question, "topics": topics,"description": description});
     return myFeedQuestion;
+  }
+
+  async EditQuestion(questionId, question, topics, description) {
+    const myFeedQuestion = this.put("api/Question/", {"id": questionId, "title": question, "topics": topics,"description": description});
+    return myFeedQuestion;
+  }
+
+  async DeleteQuestion(questionId) {
+    const response = this.delete("api/Question/" + questionId);
+    return response;
   }
 }
 
