@@ -18,10 +18,10 @@ namespace backend.repositories
 
         public async Task<Answer?> GetAnswerbyId(Guid id)
         {
-            var question = await _context.Answers.FindAsync(id);
-            if (question != null)
+            var answer = await _context.Answers.FindAsync(id);
+            if (answer != null)
             {
-                return question;
+                return answer;
             }
             return null;
         }
@@ -66,6 +66,11 @@ namespace backend.repositories
             }
 
             return null;
+        }
+
+        public Task<List<Answer>?> GetAnswerByQuestionId(Guid questionId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
