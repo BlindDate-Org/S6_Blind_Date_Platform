@@ -35,16 +35,16 @@ namespace backend.repositories
 
         public async Task<List<Answer>?> UpdateAnswer(Answer answer)
         {
-            var dbQuestion = await _context.Answers.FindAsync(answer.Id);
-            if (dbQuestion != null)
+            var dbAsnwer = await _context.Answers.FindAsync(answer.Id);
+            if (dbAsnwer != null)
             {
-                dbQuestion.Description = answer.Description;
-                dbQuestion.Reported = answer.Reported;
-                dbQuestion.Id = answer.Id;
-                dbQuestion.Question_Id = answer.Question_Id;
-                dbQuestion.DateOfAdded = answer.DateOfAdded;
-                dbQuestion.AmountOfLikes = answer.AmountOfLikes;
-                dbQuestion.Owner_Id = answer.Owner_Id;
+                dbAsnwer.Description = answer.Description;
+                dbAsnwer.Reported = answer.Reported;
+                dbAsnwer.Id = answer.Id;
+                dbAsnwer.Question_Id = answer.Question_Id;
+                dbAsnwer.DateOfAdded = answer.DateOfAdded;
+                dbAsnwer.AmountOfLikes = answer.AmountOfLikes;
+                dbAsnwer.Owner_Id = answer.Owner_Id;
               
                 await _context.SaveChangesAsync();
 
