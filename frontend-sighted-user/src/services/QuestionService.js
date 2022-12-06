@@ -1,3 +1,4 @@
+import axios from 'axios';
 import BaseHttpService from './BaseHttpService';
 
 
@@ -189,18 +190,28 @@ export const FakeQuestionList = [{
   "amountOfLikes": 18
 }]
 
-
-
  export  class QuestionService extends BaseHttpService {
 
-  GetMyFeedQuestionList() {
-    //TODO: Fetch real data from backend
-    return FakeQuestionList;
+  async GetMyFeedQuestionList() {
+    const res = await axios.get('http://localhost:5071/api/question')
+    if (!res||res?.status!==200){
+      return [];
+    }  
+    const questions = res?.data || [];
+    return questions;  
   }
   async GetQuestion(questionId){
-    //TODO: Fetch real data from backend
-    const Question =  FakeQuestionList.find(question=>question.id===questionId);
-    return Question;
+    try{
+      const res = await axios.get(`http://localhost:5071/api/question/${questionId}`)
+      if (!res||res?.status!==200){
+        return "Question not found";
+      }
+      const question = res?.data;
+      return question;
+      //NOTE: The exception part need to be desinged when if needed in later stage
+    }catch{
+      return "Question not found";
+    }
   }
 }
 
