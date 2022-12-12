@@ -96,19 +96,14 @@ namespace BackendQuestionTests.IntergrationTests
             string answer1 = "In summer dont wear heavy clothes";
             string answer2 = "Always be careful when meeting new people";
 
-            List<string> answers = new List<string>();
-            answers.Add(answer1);
-            answers.Add(answer2);
+            string answers = "Best question ever!";
 
-            List<string> topics = new List<string>();
+            string topics = "Fashion";
 
             var topicId1 = ifixture.Create<Guid>();
             var topicId2 = ifixture.Create<Guid>();
             string topic1 = "Eating";
-            string topic2 =  "Shopping";
-            topics.Add(topic1);
-            topics.Add(topic2);
-
+            string topic2 = "Shopping";
 
 
             Question question = new Question(questionId, topics, "Restaurant", "Looking for a nice restaurant for nice food", ownerId, answers, new DateTime(2010, 3, 11), false, 10);
@@ -164,18 +159,11 @@ namespace BackendQuestionTests.IntergrationTests
             string answer1 = "In summer dont wear heavy clothes";
             string answer2 = "Always be careful when meeting new people";
 
-            List<string> answers = new List<string>();
-            answers.Add(answer1);
-            answers.Add(answer2);
+            string answers = "Test answer";
 
-            List<string> topics = new List<string>();
-
-            var topicId1 = ifixture.Create<Guid>();
-            var topicId2 = ifixture.Create<Guid>();
+            string topics = "Fashion";
             string topic1 = "Eating";
             string topic2 = "Shopping";
-            topics.Add(topic1);
-            topics.Add(topic2);
 
 
 

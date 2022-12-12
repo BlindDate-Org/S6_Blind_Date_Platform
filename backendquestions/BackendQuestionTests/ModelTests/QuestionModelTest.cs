@@ -25,20 +25,11 @@ namespace BackendQuestionTests.ModelTests
            // var question_Id = ifixture.Create<Guid>();
             var ownerId2 = ifixture.Create<Guid>();
 
-         
-            string answer1 = new string("In summer dont wear heavy clothes");
-            string answer2 = new string("Always be careful when meeting new people");
+            string answers = "Best clothing is heavy clothing";
+            string topics = "Fashion";
 
-            List<string> answers = new List<string>();
-            answers.Add(answer1);
-            answers.Add(answer2);
-
-            List<string> topics = new List<string>();
-
-            string topic1 = new string("Eating");
-            string topic2 = new string( "Shopping");
-            topics.Add(topic1);
-            topics.Add(topic2);
+            string topic1 = "Eating";
+            string topic2 = "Shopping";
 
             
 
