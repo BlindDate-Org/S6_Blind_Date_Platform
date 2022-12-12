@@ -8,9 +8,9 @@ const AnswerItem = ({ answer }) => {
       <div className='flex justify-between items-stretch'>
         {/* question title */}
         <div className='w-11/12'>
-          {/* NOT usable if answers is a string 
+          {/* NOT usable if answer has no username 
           <div><UserCircleIcon className='w-8 inline' />{answer.username}</div> */}
-          <h1 className='w-full break-words font-mono'>{answer}</h1>
+          <h1 className='w-full break-words font-mono'>{answer.description}</h1>
         </div>
         {/* menue for question */}
         <div className='w-1/6 flex justify-end pr-2'>

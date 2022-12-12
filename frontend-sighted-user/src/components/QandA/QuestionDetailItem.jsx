@@ -4,6 +4,7 @@ import { QandAContext } from '../../contexts/QandAContext'
 import Swal from "sweetalert2";
 import QuestionService from '../../services/QuestionService'
 import EditQuestion from './EditQuestion';
+import PostAnswer from './PostAnswer';
 import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
@@ -26,7 +27,7 @@ const QuestionDetailItem = () => {
         </div>
         {/* menue for question */}
         <div className='w-30'>
-          <div className='hidden md:inline pr-2'><ChatBubbleBottomCenterTextIcon className='w-6 inline' />Answer</div>
+        <button onClick={ () => postAnswer(selectedQuestion.id)} className='hidden md:inline pr-2'><ChatBubbleBottomCenterTextIcon className='w-6 inline' />Answer</button>
           <div className='hidden md:inline pr-2'><ExclamationTriangleIcon className='w-6 inline' />Report</div>
           <button onClick={() => editQuestion(selectedQuestion.id, selectedQuestion.title, selectedQuestion.topics, selectedQuestion.description)} className='hidden md:inline pr-2 text-orange-500 cursor-pointer'><PencilSquareIcon className='w-6 inline fill-orange-500' />Edit</button>
           <button onClick={ () => deleteQuestion(selectedQuestion.id)} className='hidden md:inline pr-2 text-red-500'><TrashIcon className='w-6 inline fill-red-500' />Delete</button>
@@ -76,6 +77,20 @@ function editQuestion(questionId, title, topics, description) {
         title={title}
         topics={topics}
         description={description}
+      />
+    ),
+    showCloseButton: true,
+    showConfirmButton: false,
+  });
+}
+
+function postAnswer(questionId) {
+  MySwal.fire({
+    title: <p>Post an answer</p>,
+    html: (
+      <PostAnswer
+        questionId={questionId}
+        
       />
     ),
     showCloseButton: true,
