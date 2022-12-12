@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default class BaseHttpService {
- BASE_URL = process.env.REACT_APP_BASE_URL || "https://localhost:7071";
- //BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5071";
+ //BASE_URL = process.env.REACT_APP_BASE_URL || "https://localhost:7071";
+ BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5071";
 
  
  _accessToken = null;
@@ -49,8 +49,10 @@ export default class BaseHttpService {
     const { statusCode } = error.response.data;
 
     if (statusCode !== 401) {
-      throw error;
-    } else {
+      return 'Data not found'
+      //throw error;
+    } 
+    else {
       return this._handle401();
     }
   }
