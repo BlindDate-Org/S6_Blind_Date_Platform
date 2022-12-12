@@ -2,12 +2,8 @@
 {
     public class Question
     {
-<<<<<<< HEAD
         //Mary Added the constructor to initialize the object for testing
         /*public Question(Guid id, List<Topic> topics, string title, string description, Guid ownerId, List<Answer> answers, DateTime dateOfAdded, bool reported, int amountOfLikes)
-=======
-        public Question(Guid id, string topics, string title, string description, Guid ownerId, string answers, DateTime dateOfAdded, bool reported, int amountOfLikes)
->>>>>>> main
         {
             Id = id;
             Topics = topics;

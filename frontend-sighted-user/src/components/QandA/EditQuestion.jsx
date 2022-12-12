@@ -23,6 +23,7 @@ const EditQuestion = (props) => {
 
   const questionRef = React.useRef();
   const descriptionRef = React.useRef();
+  const topicRef = React.useRef();
 
   function onChangeTopics(event) {
     selectedTopics = event;
@@ -34,12 +35,13 @@ const EditQuestion = (props) => {
 
     //The inputs from the post-question form
     const question = questionRef.current.value;
-    const topics = selectedTopics;
+    // const topics = selectedTopics;
+    const topics = topicRef.current.value;
     console.log("topics", topics);
     const description = descriptionRef.current.value;
 
-    // Fix Topics issue
-    QuestionService.EditQuestion(questionId, question, "", description)
+    //TODO Fix Topics issue
+    QuestionService.EditQuestion(questionId, question, topics, description)
       .then((result) => {
         const statusCode = result.status;
         console.log(statusCode);
@@ -70,12 +72,20 @@ const EditQuestion = (props) => {
         </label>
         <label className="block text-left ">
           Topic
+          {/* Later added if Topics is not a string
           <Creatable
             isMulti
             options={options}
             defaultValue={selectedTopics}
             className="shadow mb-5"
             onChange={onChangeTopics}
+          /> */}
+          <input
+            type="text"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline mb-5"
+            ref={topicRef}
+            defaultValue={topics}
+            required
           />
         </label>
 

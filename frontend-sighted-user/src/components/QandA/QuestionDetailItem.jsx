@@ -8,8 +8,6 @@ import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
 
-//let editQuestion = true;
-
 const QuestionDetailItem = () => {
   const { selectedQuestion } = useContext(QandAContext);
   return (
@@ -18,12 +16,12 @@ const QuestionDetailItem = () => {
       <div className='flex justify-between items-stretch'>
         {/* question title */}
         <div>
-          <h1 contentEditable={editQuestion} suppressContentEditableWarning={true} className='text-2xl font-mono'>{selectedQuestion.title}</h1>
-          {
+          <h1 className='text-2xl font-mono'>{selectedQuestion.title}</h1>
+          {/* NOT usable if topics is a string{
             selectedQuestion?.topics?.map((topic, _) => {
               return <span className='topicTag' key={_}>{topic}</span>
             })
-          }
+          } */}<span className='topicTag' >{selectedQuestion?.topics}</span>
           <div><UserCircleIcon className='w-8 inline' />{selectedQuestion.owner_id}</div>
         </div>
         {/* menue for question */}
@@ -76,7 +74,7 @@ function editQuestion(questionId, title, topics, description) {
       <EditQuestion
         questionId={questionId}
         title={title}
-        //topics={topics}
+        topics={topics}
         description={description}
       />
     ),
