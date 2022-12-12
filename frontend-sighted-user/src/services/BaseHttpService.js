@@ -1,8 +1,11 @@
 import axios from "axios";
 
 export default class BaseHttpService {
-  BASE_URL = process.env.REACT_APP_BASE_URL || "https://localhost:7071";
-  _accessToken = null;
+ BASE_URL = process.env.REACT_APP_BASE_URL || "https://localhost:7071";
+ //BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5071";
+
+ 
+ _accessToken = null;
 
   constructor(routerStore) {
     this.routerStore = routerStore;

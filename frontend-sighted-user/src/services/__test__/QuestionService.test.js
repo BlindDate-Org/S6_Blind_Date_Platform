@@ -1,27 +1,29 @@
+import axios from 'axios';
 import QuestionService from '../QuestionService'
 
 describe('----- Question Service ------', async () => {
   
-  test('Question Service Loaded correctly',async ()=>{
+  test('Question Service Module Loaded Correctly',async ()=>{
     expect(QuestionService).toBeTruthy();
   })
 
-  test('Load My Feed Question',async ()=>{
-   // const myFeedQuestions = await QuestionService.GetMyFeedQuestionList();
+  test('Load My Feed Questions',async ()=>{
+   const myFeedQuestions = await QuestionService.GetMyFeedQuestionList();
+  // const x = await axios.get('https://jsonplaceholder.typicode.com/posts');
    // expect(Array.isArray(myFeedQuestions)).toEqual(true)
   })
 
-  test('Get Question by send none exist id',async ()=>{
-    const questionId =  'e3e098b5-6691-40b8-b1ff-ef5742e10e72';
-    const res = await QuestionService.GetQuestion(questionId);
-    expect(res).toEqual("Question not found");
-  })
+  // test('Get Question by send none exist id',async ()=>{
+  //   const questionId =  'e3e098b5-6691-40b8-b1ff-ef5742e10e72';
+  //   const res = await QuestionService.GetQuestion(questionId);
+  //   expect(res).toEqual("Question not found");
+  // })
 
-  test('Get Question by sending a error formate id',async()=>{
-    const questionId =  'FakeQuestionList[0].id;$asjdhsjfi1E!Fvm'
-    const res = await QuestionService.GetQuestion(questionId);
-    expect(res).toEqual('Question not found')
-  })
+  // test('Get Question by sending a error formate id',async()=>{
+  //   const questionId =  'FakeQuestionList[0].id;$asjdhsjfi1E!Fvm'
+  //   const res = await QuestionService.GetQuestion(questionId);
+  //   expect(res).toEqual('Question not found')
+  // })
 
 
 })
