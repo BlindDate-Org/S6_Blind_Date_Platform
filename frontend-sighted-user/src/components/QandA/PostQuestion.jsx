@@ -1,27 +1,19 @@
-import React, { useContext } from 'react';
+import React  from 'react';
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-import { QandAContext } from "../../contexts/QandAContext";
 
+const PostQuestion = ({onPost}) => {
 
-const MySwal = withReactContent(Swal);
-
-const PostQuestion = () => {
-  const { PostQuestion } = useContext(QandAContext);
-  
   const questionRef = React.useRef();
   const topicRef = React.useRef();
   const descriptionRef = React.useRef();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
     //The inputs from the post-question form
     const question = questionRef.current.value;
     const topic = topicRef.current.value;
     const description = descriptionRef.current.value;
-
-    PostQuestion(question, topic, description);
+    onPost(question, topic, description);
     Swal.fire('Question posted!', '', 'success')
   };
   return (
@@ -30,7 +22,7 @@ const PostQuestion = () => {
         <label className="block text-left">
           Question
           <input
-          
+
             type="text"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline mb-5"
             ref={questionRef}
