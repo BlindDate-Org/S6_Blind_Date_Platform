@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from 'react';
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import QuestionService from '../../services/QuestionService'
+import { QandAContext } from "../../contexts/QandAContext";
+
+
 const MySwal = withReactContent(Swal);
 
 const PostQuestion = () => {
+  const { PostQuestion } = useContext(QandAContext);
+  
   const questionRef = React.useRef();
   const topicRef = React.useRef();
   const descriptionRef = React.useRef();
@@ -17,7 +21,7 @@ const PostQuestion = () => {
     const topic = topicRef.current.value;
     const description = descriptionRef.current.value;
 
-    QuestionService.PostQuestion(question, topic, description)
+    PostQuestion(question, topic, description);
     Swal.fire('Question posted!', '', 'success')
   };
   return (

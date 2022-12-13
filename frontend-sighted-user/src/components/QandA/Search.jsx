@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 import { MagnifyingGlassIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import PostQuestion from './PostQuestion'
+import QandAContextProvider from '../../contexts/QandAContext'
 
 const MySwal = withReactContent(Swal)
 
@@ -37,7 +38,7 @@ const Search = () => {
 function sweetalert() {
   MySwal.fire({
     title: <p>Post a Question</p>,
-    html: <PostQuestion />,
+    html: <QandAContextProvider><PostQuestion /></QandAContextProvider>,
     showCloseButton: true,
     showConfirmButton: false
   });

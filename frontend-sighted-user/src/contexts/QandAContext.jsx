@@ -43,10 +43,21 @@ const QandAContextProvider = (props) => {
     return answers;
   }
 
+  const PostQuestion = async (question, topic, description) => {
+    console.log("PostQuestion", question);
+    let response = await QuestionService.PostQuestion(question, topic, description);
+    console.log("response.data", response.data);
+    //SetSelectedQuestion(response);
+    
+    SetMyFeedQuestions([]);
+  
+    //return response.data;
+  }
 
   //Get Feed Question List
   const GetFeedQuestionList = async () => {
     let questions = await QuestionService.GetMyFeedQuestionList();
+    console.log("GetFeedQuestionList", questions);
     SetMyFeedQuestions(questions);
   }
 
@@ -63,7 +74,7 @@ const QandAContextProvider = (props) => {
 
 
 
-  return <QandAContext.Provider value={{ myFeedQuestions, selectedTab, selectedQuestion, myFeedAnswers, selectedAnswers, SwitchTabsTo, GetQuestionDetail, GetAnswersDetail }}>
+  return <QandAContext.Provider value={{ myFeedQuestions, selectedTab, selectedQuestion, myFeedAnswers, selectedAnswers, SwitchTabsTo, GetQuestionDetail, GetAnswersDetail, PostQuestion }}>
     {props.children}
   </QandAContext.Provider>
 }
