@@ -1,8 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default class BaseHttpService {
-  BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3000';
-  _accessToken = null;
+ //BASE_URL = process.env.REACT_APP_BASE_URL || "https://localhost:7071";
+ BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5071";
+
+ 
+ _accessToken = null;
 
   constructor(routerStore) {
     this.routerStore = routerStore;
@@ -10,40 +13,52 @@ export default class BaseHttpService {
 
   async get(endpoint, options = {}) {
     Object.assign(options, this._getCommonOptions());
-    return axios.get(`${this.BASE_URL}/${endpoint}`, options)
-      .catch(error => this._handleHttpError(error));
+
+    try {
+      const response = await axios.get(`${this.BASE_URL}/${endpoint}`, options);
+      console.log("response  ", response);
+      return response.data;
+    } catch (error) {
+      this._handleHttpError(error);
+    }
   }
 
   async post(endpoint, data = {}, options = {}) {
     Object.assign(options, this._getCommonOptions());
-    return axios.post(`${this.BASE_URL}/${endpoint}`, data, options)
-      .catch(error => this._handleHttpError(error));  
+    return axios
+      .post(`${this.BASE_URL}/${endpoint}`, data, options)
+      .catch((error) => this._handleHttpError(error));
   }
 
   async delete(endpoint, options = {}) {
     Object.assign(options, this._getCommonOptions());
-    return axios.delete(`${this.BASE_URL}/${endpoint}`, options)
-      .catch(error => this._handleHttpError(error));     
+    return axios
+      .delete(`${this.BASE_URL}/${endpoint}`, options)
+      .catch((error) => this._handleHttpError(error));
   }
 
   async put(endpoint, data = {}, options = {}) {
     Object.assign(options, this._getCommonOptions());
-    return axios.put(`${this.BASE_URL}/${endpoint}`, data, options)
-      .catch(error => this._handleHttpError(error));   
+    return axios
+      .put(`${this.BASE_URL}/${endpoint}`, data, options)
+      .catch((error) => this._handleHttpError(error));
   }
 
   _handleHttpError(error) {
+    console.log("error: ", error);
     const { statusCode } = error.response.data;
 
     if (statusCode !== 401) {
-      throw error;
-    } else {
+      return 'Data not found'
+      //throw error;
+    } 
+    else {
       return this._handle401();
     }
   }
 
   _handle401() {
-    window.location.hash = '/signin';
+    window.location.hash = "/signin";
   }
 
   _getCommonOptions() {
@@ -62,16 +77,16 @@ export default class BaseHttpService {
 
   saveToken(accessToken) {
     this._accessToken = accessToken;
-    return localStorage.setItem('accessToken', accessToken);
+    return localStorage.setItem("accessToken", accessToken);
   }
 
   loadToken() {
-    const token = localStorage.getItem('accessToken');
+    const token = localStorage.getItem("accessToken");
     this._accessToken = token;
     return token;
   }
 
   removeToken() {
-    localStorage.removeItem('accessToken');
+    localStorage.removeItem("accessToken");
   }
 }

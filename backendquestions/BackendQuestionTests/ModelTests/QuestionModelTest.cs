@@ -38,11 +38,9 @@ namespace BackendQuestionTests.ModelTests
             //Assert
 
             Assert.Equal(questionId, question.Id);
-            Assert.Equal(topics, question.Topics);
             Assert.Equal("Restaurant", question.Title);
             Assert.Equal("Looking for a nice restaurant for nice food", question.Description);
             Assert.Equal(ownerId,question.OwnerId);
-            Assert.Equal(answers, question.Answers);
             Assert.Equal(new DateTime(2010, 3, 11), question.DateOfAdded);
             Assert.False(question.Reported);
             Assert.Equal(10, question.AmountOfLikes);

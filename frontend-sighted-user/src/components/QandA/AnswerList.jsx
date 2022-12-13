@@ -12,11 +12,12 @@ const AnswerList = () => {
         {/* {selectedQuestion?.answers?.map((answer => {
           return <AnswerItem answer={answer} key={answer.id} />
         }))} */}
-        {
+        {/* NOT usable if answers is a string{
           selectedQuestion?.answers?.map(answer => {
             return <AnswerItem key={answer.id} answer={answer} />
           })
-        }
+        } */}
+        <AnswerItem answer={selectedQuestion?.answers} />
       </div>
 
     </>

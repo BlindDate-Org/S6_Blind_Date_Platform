@@ -16,7 +16,6 @@ const QandAContextProvider = (props) => {
   const [myFeedQuestions, SetMyFeedQuestions] = useState([]);
   const [selectedQuestion, SetSelectedQuestion] = useState({});
 
-
   //Switch Content Filter
   const SwitchTabsTo = (tabName) => {
     switch (tabName) {
@@ -35,11 +34,9 @@ const QandAContextProvider = (props) => {
   }
 
 
-
-
   //Get Feed Question List
   const GetFeedQuestionList = async () => {
-    const data = await QuestionService.GetMyFeedQuestionList();
+    let data = await QuestionService.GetMyFeedQuestionList();
     SetMyFeedQuestions(data);
   }
 
