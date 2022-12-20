@@ -2,14 +2,13 @@
 {
     public class Question
     {
-        public Question(Guid id, string topics, string title, string description, Guid ownerId, string answers, DateTime dateOfAdded, bool reported, int amountOfLikes)
+        public Question(Guid id, string topics, string title, string description, Guid ownerId, DateTime dateOfAdded, bool reported, int amountOfLikes)
         {
             Id = id;
             Topics = topics;
             Title = title;
             Description = description;
             OwnerId = ownerId;
-            Answers = answers;
             DateOfAdded = dateOfAdded;
             Reported = reported;
             AmountOfLikes = amountOfLikes;
@@ -34,7 +33,6 @@
         public string Title { get; set; } = String.Empty;
         public string Description { get; set; } = String.Empty;
         public Guid OwnerId { get; set; }
-        public string Answers { get; set; } = String.Empty;//Answers instead of Answer for better overview
         public DateTime DateOfAdded { get; set; }
         public bool Reported { get; set; }
         public int AmountOfLikes { get; set; }

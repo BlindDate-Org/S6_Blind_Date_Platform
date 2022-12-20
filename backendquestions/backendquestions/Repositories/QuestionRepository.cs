@@ -57,7 +57,6 @@ namespace backendquestions.Repositories
                 dbQuestion.Title = request.Title;
                 dbQuestion.Description = request.Description;
                 dbQuestion.OwnerId = request.OwnerId;
-                dbQuestion.Answers = request.Answers;
                 dbQuestion.DateOfAdded = request.DateOfAdded;
                 dbQuestion.Reported = request.Reported;
                 dbQuestion.AmountOfLikes = request.AmountOfLikes;
