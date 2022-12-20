@@ -9,11 +9,8 @@ class AnswerServices extends BaseHttpService {
     return answerList;
   }
   async GetAnswersByQuestionId(questionId) {
-    const answers = await this.get("api/Answer/");
-    console.log("Answers", answers);
-    let selectedAnswers = answers.filter(item => item.question_Id === questionId) || null;
-    console.log("selectedAnswers", selectedAnswers);
-    return selectedAnswers;
+    const answers = await this.get("api/Answer/questionid/" + questionId);
+    return answers;
   }
   
   async PostAnswer(questionId, answer) {    
