@@ -63,5 +63,17 @@ namespace backend.Controllers
 
             return NotFound("Question not found with given id");
         }
+
+        [HttpGet("questionid/{id}/")]
+        public async Task<ActionResult<List<Answer>>> GetByQuestionId(Guid id)
+        {
+            var response = await _context.GetAnswerByQuestionId(id);
+            if (response != null)
+            {
+                return Ok(response);
+            }
+            return NotFound("Answer not found with given id");
+        }
+
     }
 }
