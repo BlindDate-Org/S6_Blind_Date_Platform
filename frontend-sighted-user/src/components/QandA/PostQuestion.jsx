@@ -13,7 +13,7 @@ const PostQuestion = () => {
   const topicRef = React.useRef();
   const descriptionRef = React.useRef();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     //The inputs from the post-question form
@@ -21,7 +21,7 @@ const PostQuestion = () => {
     const topic = topicRef.current.value;
     const description = descriptionRef.current.value;
 
-    PostQuestion(question, topic, description);
+    await PostQuestion(question, topic, description);
     Swal.fire('Question posted!', '', 'success')
   };
   return (
