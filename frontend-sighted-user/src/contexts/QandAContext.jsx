@@ -44,20 +44,22 @@ const QandAContextProvider = (props) => {
   }
 
   const PostQuestion = async (question, topic, description) => {
-    console.log("PostQuestion", question);
     let response = await QuestionService.PostQuestion(question, topic, description);
-    console.log("response.data", response.data);
-    //SetSelectedQuestion(response);
-    
-    SetMyFeedQuestions([]);
-  
-    //return response.data;
+    SetMyFeedQuestions(response.data);
   }
+
+
+  const DeleteQuestion = async (questionId) => {
+    let response = await QuestionService.DeleteQuestion(questionId);
+    if (response.status === 200) {
+      SetMyFeedQuestions([...myFeedQuestions.filter(questionId => questionId !== questionId), questionId]);
+    }
+  }
+
 
   //Get Feed Question List
   const GetFeedQuestionList = async () => {
     let questions = await QuestionService.GetMyFeedQuestionList();
-    console.log("GetFeedQuestionList", questions);
     SetMyFeedQuestions(questions);
   }
 
@@ -65,6 +67,7 @@ const QandAContextProvider = (props) => {
     let answers = await AnswerService.GetAnswerList();
     SetMyFeedAnswers(answers);
   }
+
 
 
   useEffect(() => {
