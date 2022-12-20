@@ -68,9 +68,14 @@ namespace backend.repositories
             return null;
         }
 
-        public Task<List<Answer>?> GetAnswerByQuestionId(Guid questionId)
+        public async Task<List<Answer>> GetAnswerByQuestionId(Guid questionId)
         {
-            throw new NotImplementedException();
+            var dbAnswer = await _context.Answers.Where(answer => answer.Question_Id == questionId).ToListAsync();
+            if(dbAnswer != null)
+            {
+                return dbAnswer;
+            }
+            return null;
         }
     }
 }
