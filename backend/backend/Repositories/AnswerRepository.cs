@@ -18,10 +18,10 @@ namespace backend.repositories
 
         public async Task<Answer?> GetAnswerbyId(Guid id)
         {
-            var answer = await _context.Answers.FindAsync(id);
-            if (answer != null)
+            var question = await _context.Answers.FindAsync(id);
+            if (question != null)
             {
-                return answer;
+                return question;
             }
             return null;
         }
@@ -35,16 +35,16 @@ namespace backend.repositories
 
         public async Task<List<Answer>?> UpdateAnswer(Answer answer)
         {
-            var dbAsnwer = await _context.Answers.FindAsync(answer.Id);
-            if (dbAsnwer != null)
+            var dbQuestion = await _context.Answers.FindAsync(answer.Id);
+            if (dbQuestion != null)
             {
-                dbAsnwer.Description = answer.Description;
-                dbAsnwer.Reported = answer.Reported;
-                dbAsnwer.Id = answer.Id;
-                dbAsnwer.Question_Id = answer.Question_Id;
-                dbAsnwer.DateOfAdded = answer.DateOfAdded;
-                dbAsnwer.AmountOfLikes = answer.AmountOfLikes;
-                dbAsnwer.Owner_Id = answer.Owner_Id;
+                dbQuestion.Description = answer.Description;
+                dbQuestion.Reported = answer.Reported;
+                dbQuestion.Id = answer.Id;
+                dbQuestion.Question_Id = answer.Question_Id;
+                dbQuestion.DateOfAdded = answer.DateOfAdded;
+                dbQuestion.AmountOfLikes = answer.AmountOfLikes;
+                dbQuestion.Owner_Id = answer.Owner_Id;
               
                 await _context.SaveChangesAsync();
 
