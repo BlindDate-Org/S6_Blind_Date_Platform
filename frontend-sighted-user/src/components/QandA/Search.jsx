@@ -28,7 +28,6 @@ const Search = () => {
     //Reset search input
     e.target.reset();
   }
-
   return (
     <div className='w-full flex'>
       <form className='flex-1' onSubmit={(e) => onSubmition(e)}>
