@@ -308,3 +308,8 @@ C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\ob
 C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\backend.pdb
 C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\backend.genruntimeconfig.cache
 C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\ref\backend.dll
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\staticwebassets\msbuild.build.backend.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\luca_\source\repos\Semester-6\S6_Blind_Date_Platform\backend\backend\obj\Debug\net6.0\staticwebassets.pack.json

@@ -1,6 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import QuestionService from '../../services/QuestionService'
 const MySwal = withReactContent(Swal);
 
 const PostQuestion = () => {
@@ -10,14 +11,14 @@ const PostQuestion = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Swal.fire('Question posted!', '', 'success')
 
     //The inputs from the post-question form
     const question = questionRef.current.value;
     const topic = topicRef.current.value;
     const description = descriptionRef.current.value;
 
-    //TODO: POST to backend
+    QuestionService.PostQuestion(question, topic, description)
+    Swal.fire('Question posted!', '', 'success')
   };
   return (
     <>
