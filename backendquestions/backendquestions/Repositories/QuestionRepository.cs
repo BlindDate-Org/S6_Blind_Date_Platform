@@ -11,6 +11,12 @@ namespace backendquestions.Repositories
         {
             _context = context;
         }
+
+        public Task<List<Question>> GetQuestionByTopic(string topic)
+        {
+            throw new NotImplementedException();
+        }
+
         async Task<List<Question>> IQuestionRepository.AddQuestion(Question question)
         {
             _context.Questions.Add(question);
