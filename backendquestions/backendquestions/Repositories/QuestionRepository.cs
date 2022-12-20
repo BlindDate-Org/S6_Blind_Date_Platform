@@ -12,9 +12,14 @@ namespace backendquestions.Repositories
             _context = context;
         }
 
-        public Task<List<Question>> GetQuestionByTopic(string topic)
+        public async Task<List<Question>> GetQuestionByTopic(string topic)
         {
-            throw new NotImplementedException();
+            var dbQuestion = await _context.Questions.Where(question => question.Topics == topic).ToListAsync();
+            if(dbQuestion != null)
+            {
+                return dbQuestion;
+            }
+            return null;
         }
 
         async Task<List<Question>> IQuestionRepository.AddQuestion(Question question)
