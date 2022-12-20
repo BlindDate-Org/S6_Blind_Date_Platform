@@ -9,5 +9,6 @@ namespace backendquestions.Interfaces
         Task<List<Question>> AddQuestion(Question question);
         Task<List<Question>> UpdateQuestion(Question request);
         Task<List<Question>> DeleteQuestion(Guid id);
+        Task<List<Question>> GetQuestionByTopic(string topic);
     }
 }

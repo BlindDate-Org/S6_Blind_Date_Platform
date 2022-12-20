@@ -20,27 +20,18 @@ namespace BackendQuestionTests.IntergrationTests
         private readonly IFixture ifixture;
         private readonly Mock<IQuestionService> questionserviceMock;//the service Mock..mocking the service
         private readonly QuestionController systemUnderTest;
-
-        //Constructor
-      
            
         public QuestionApisTest()
         {
             ifixture = new Fixture();
             questionserviceMock = ifixture.Freeze<Mock<IQuestionService>>();
             systemUnderTest = new QuestionController(questionserviceMock.Object);
-
         }
- 
 
-      
         //test 2 getby id
-
         [Fact]
         public async Task GetQuestionById()
         {
-            //Scenarios
-
             //Arrange
             var questionsDataMock = ifixture.Create<Question>();//creating a answer by ifixture
             var id = ifixture.Create<Guid>();
@@ -52,17 +43,11 @@ namespace BackendQuestionTests.IntergrationTests
 
             result.Should().NotBeNull();
             questionserviceMock.Verify(x => x.GetQuestionById(id), Times.Once());
-
-
-
-
         }
         [Fact]
         public async Task GetQuestionsTest()
         {
-            //Scenarios
             //Arrange already done at the constructor
-
             //Act
             var result = await systemUnderTest.GetAllQuestions().ConfigureAwait(false);
 
@@ -71,32 +56,19 @@ namespace BackendQuestionTests.IntergrationTests
             Assert.NotNull(result);
             questionserviceMock.Verify(x => x.GetAllQuestions(), Times.Once());
 
-
-
-
         }
 
         [Fact]
         public async Task CreateQuestionTest()
         {
-            //Scenarios
-
-            //Arrange
             //Arrange
             var questionId = ifixture.Create<Guid>();
             var ownerId = ifixture.Create<Guid>();
-            //Arrange
             var answerid = ifixture.Create<Guid>();
 
             var answerid2 = ifixture.Create<Guid>();
             // var question_Id = ifixture.Create<Guid>();
             var ownerId2 = ifixture.Create<Guid>();
-
-
-            string answer1 = "In summer dont wear heavy clothes";
-            string answer2 = "Always be careful when meeting new people";
-
-            string answers = "Best question ever!";
 
             string topics = "Fashion";
 
@@ -106,7 +78,7 @@ namespace BackendQuestionTests.IntergrationTests
             string topic2 = "Shopping";
 
 
-            Question question = new Question(questionId, topics, "Restaurant", "Looking for a nice restaurant for nice food", ownerId, answers, new DateTime(2010, 3, 11), false, 10);
+            Question question = new Question(questionId, topics, "Restaurant", "Looking for a nice restaurant for nice food", ownerId, new DateTime(2010, 3, 11), false, 10);
 
             //Act
             var result = await systemUnderTest.PostQuestion(question).ConfigureAwait(false);
@@ -115,16 +87,11 @@ namespace BackendQuestionTests.IntergrationTests
             //Assert.NotNull(result);
             result.Should().NotBeNull();
             questionserviceMock.Verify(x => x.AddQuestion(question), Times.Once());
-
-
-
-
         }
+
         [Fact]
         public async Task DeleteQuestionTest()
         {
-            //Scenarios
-
             //Arrange
             var questionId = ifixture.Create<Guid>();
            
@@ -135,62 +102,39 @@ namespace BackendQuestionTests.IntergrationTests
             //Assert.NotNull(result);
             result.Should().NotBeNull();
             questionserviceMock.Verify(x => x.DeleteQuestion(questionId), Times.Once());
-
-
-
-
         }
+
         [Fact]
         public async Task UpdateQuestionsTest()
         {
-            //Scenarios
-
-            //Arrange...Takes a Question Object
+            //Arrange
             var questionId = ifixture.Create<Guid>();
             var ownerId = ifixture.Create<Guid>();
-            //Arrange
             var answerid = ifixture.Create<Guid>();
 
             var answerid2 = ifixture.Create<Guid>();
-            // var question_Id = ifixture.Create<Guid>();
             var ownerId2 = ifixture.Create<Guid>();
-
-
-            string answer1 = "In summer dont wear heavy clothes";
-            string answer2 = "Always be careful when meeting new people";
-
-            string answers = "Test answer";
 
             string topics = "Fashion";
             string topic1 = "Eating";
             string topic2 = "Shopping";
 
-
-
-            Question question = new Question(questionId, topics, "Restaurant", "Looking for a nice restaurant for nice food", ownerId, answers, new DateTime(2010, 3, 11), false, 10);
-
-
+            Question question = new Question(questionId, topics, "Restaurant", "Looking for a nice restaurant for nice food", ownerId, new DateTime(2010, 3, 11), false, 10);
 
             //Act
             var result = await systemUnderTest.UpdateQuestion(question);
 
             //Assert
-
-            //Assert
-            //Assert.NotNull(result);
             result.Should().NotBeNull();
             questionserviceMock.Verify(x => x.UpdateQuestion(question));
 
         }
         //UNSUCCESSFUL SCENARIOS
 
-        //should return not found when no data Found
-
         [Fact]
         public async Task GetQuestionById_Should_RetrunNotFound_WhenNoFoundAnswerById()
         {
             //Arrange
-
             Question? questionNotFound = null;
             var id = ifixture.Create<Guid>();
             questionserviceMock.Setup(x => x.GetQuestionById(id)).ReturnsAsync(questionNotFound);
@@ -199,14 +143,10 @@ namespace BackendQuestionTests.IntergrationTests
             var result = await systemUnderTest.GetQuestionById(id).ConfigureAwait(false);
 
             //ASSERT
-
-           // result.Should().NotBeNull();
             Assert.Null(questionNotFound);
             questionserviceMock.Verify(x => x.GetQuestionById(id), Times.Once());
 
         }
-
-       
 
     }
 }

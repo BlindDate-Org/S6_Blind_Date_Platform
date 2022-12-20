@@ -1,5 +1,6 @@
 ﻿using backendquestions.Interfaces;
 using backendquestions.Models;
+using System.Runtime.CompilerServices;
 
 namespace backendquestions.Services
 {
@@ -35,6 +36,11 @@ namespace backendquestions.Services
         public async Task<List<Question>> DeleteQuestion(Guid id)
         {
             return await _questionRepository.DeleteQuestion(id);
+        }
+
+        public async Task<List<Question>> GetQuestionByTopic(string topic)
+        {
+            return await _questionRepository.GetQuestionByTopic(topic);
         }
     }
 }
