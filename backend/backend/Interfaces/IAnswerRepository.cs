@@ -10,6 +10,7 @@ namespace backend.Interfaces
         Task<List<Answer>?> UpdateAnswer(Answer answer);
         Task<List<Answer>?> DeleteAnswer(Guid id);
         Task<List<Answer>?> GetAnswerByQuestionId(Guid questionId);
+        Task<List<Answer>?> GetAnswerByQuestionTopic(string topic);
 
     }
 }
