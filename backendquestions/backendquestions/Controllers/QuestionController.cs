@@ -32,6 +32,17 @@ namespace backendquestions.Controllers
             return NotFound("Question not found with given id");
         }
 
+        [HttpGet("/filter{topic}")]
+        public async Task<ActionResult<Question>> GetQuestionByTopic(string topic)
+        {
+            var response = await _questionService.GetQuestionByTopic(topic);
+            if (response != null)
+            {
+                return Ok(response);
+            }
+            return NotFound("Question not found with given topic");
+        }
+
         [HttpPost]
         public async Task<ActionResult<List<Question>>> PostQuestion(Question Question)
         {

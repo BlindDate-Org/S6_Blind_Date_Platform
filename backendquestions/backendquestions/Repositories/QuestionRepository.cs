@@ -11,6 +11,17 @@ namespace backendquestions.Repositories
         {
             _context = context;
         }
+
+        public async Task<List<Question>> GetQuestionByTopic(string topic)
+        {
+            var dbQuestion = await _context.Questions.Where(question => question.Topics == topic).ToListAsync();
+            if(dbQuestion != null)
+            {
+                return dbQuestion;
+            }
+            return null;
+        }
+
         async Task<List<Question>> IQuestionRepository.AddQuestion(Question question)
         {
             _context.Questions.Add(question);
@@ -57,7 +68,6 @@ namespace backendquestions.Repositories
                 dbQuestion.Title = request.Title;
                 dbQuestion.Description = request.Description;
                 dbQuestion.OwnerId = request.OwnerId;
-                dbQuestion.Answers = request.Answers;
                 dbQuestion.DateOfAdded = request.DateOfAdded;
                 dbQuestion.Reported = request.Reported;
                 dbQuestion.AmountOfLikes = request.AmountOfLikes;

@@ -31,6 +31,11 @@ namespace backend.Services
             return await _answerRepository.GetAnswerbyId(id);
         }
 
+        public async Task<List<Answer>?> GetAnswerByQuestionId(Guid questionId)
+        {
+            return await _answerRepository.GetAnswerByQuestionId(questionId);
+        }
+
         public async Task<List<Answer>> UpdateAnswer(Answer answer)
         {
             return await _answerRepository.UpdateAnswer(answer);

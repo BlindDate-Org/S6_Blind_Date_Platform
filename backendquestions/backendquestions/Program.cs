@@ -1,5 +1,6 @@
 global using backendquestions.Data;
 global using Microsoft.EntityFrameworkCore;
+using System.Net;
 using backendquestions.Interfaces;
 using backendquestions.Repositories;
 using backendquestions.Services;
@@ -19,11 +20,13 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 const string corsPolicy = "cors-app-policy";
 
+
 builder.Services.AddCors(c => c.AddPolicy(corsPolicy, corsPolicyBuilder =>
 {
     corsPolicyBuilder.WithOrigins("http://127.0.0.1:5173")
         .AllowAnyMethod()
-        .AllowAnyHeader();
+        .AllowAnyHeader()
+        ;
 }));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -39,9 +42,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(corsPolicy);
-
-app.UseHttpsRedirection();
+app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
