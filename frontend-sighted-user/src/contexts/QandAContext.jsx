@@ -94,8 +94,6 @@ const QandAContextProvider = (props) => {
     SetMyFeedAnswers(answers);
   }
 
-
-
   useEffect(() => {
     GetFeedQuestionList();
     GetFeedAnswerList();

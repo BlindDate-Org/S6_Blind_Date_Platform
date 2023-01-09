@@ -33,7 +33,8 @@ const TopicFilter = () => {
           .replace(/\s+/g, '')
           .includes(query.toLowerCase().replace(/\s+/g, ''))
       )
-  return <div className="w-full mt-2" >
+
+  return <div className="w-full mt-2 mb-2" >
     <button onClick={() => openPostForm(PostQuestion)} className='btn mb-2 flex items-center h-10 w-fit'><PlusCircleIcon className='w-5' />New Question</button>
     <Combobox value={selectedTopics} onChange={setSelectedTopics} multiple >
       <div className="relative mt-1">
