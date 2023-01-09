@@ -137,18 +137,63 @@ We implemented serval tools that keep watch on the code and notify the developer
 </p>
 <p>Gives explanation on the new release notes of the update and will resolve conflicts.</p>
 
+---
+
+<h2 id="CD-pipeline"> :cloud: Continuous Deployment</h2>
+
 
 
 ---
 
-<h2 id="CD-pipeline"> :cloud: Continious integration</h2>
-
----
 
 <h2 id="used-tools"> :open_file_folder: Used tools</h2>
-<p align="justify">
-    The used tools for this project are as followed:
-    <li><a href ="https://github.com/BlindDate-Org" />GitHub Actions</li>
-    <li><a href ="https://sonarcloud.io/project/overview?id=BlindDate-Org_S6_Blind_Date_Platform" />Sonar Cloud</li>
-    <li><a href ="https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions" />Dependabot</li>
-<p>
+
+---
+
+<table align = center>
+  <tr>
+    <th>
+        <a href = "https://github.com/docker"><img src="https://avatars.githubusercontent.com/u/5429470?s=200&v=4" alt= "Docker"></a>
+    </th>
+    <th>
+        <a href = "https://www.sonarsource.com/products/sonarcloud/"><img src="https://avatars.githubusercontent.com/u/39168408?v=4" alt= "SonarCloud"></a>
+    </th>
+    <th>
+        <a href = "https://github.com/actions"><img src="https://avatars.githubusercontent.com/u/44036562?s=200&v=4" alt= "GitHub Actions"></a>
+    </th>
+    <th>
+        <a href = "https://github.com/dependabot"><img src="https://avatars.githubusercontent.com/u/27347476?s=200&v=4" alt= "dependabot"></a>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Builds and pushes the code to DockerHub account. 
+    </td>
+    <td>
+      Could also be used as code coverage, but primarily used for static code analysis.
+    </td>
+    <td>
+      Used for making artifacts and making the artifact available for other CI-jobs.
+    </td>
+    <td>
+      Used as a dependency monitoring feature were the developer gets weekly notifications about possible new releases.
+    </td>
+  </tr>
+</table>
+
+---
+
+<h2 id="getting-started"> :open_file_folder: Usefull Links to get started!</h2>
+
+- GitHub Actions making job Artifacts (for code coverage) | 
+https://www.youtube.com/watch?v=vlySg5UPIm4&t=1s
+
+- SonarCloud with GitHub actions (Security and static code analysis) | 
+https://www.sonarsource.com/products/sonarcloud/features/integrations/github-integration/?gads_campaign=Europe-4-SonarCloud&gads_ad_group=SonarCloud&gads_keyword=sonarcloud&gclid=CjwKCAiAv9ucBhBXEiwA6N8nYCi-lTDnhfnmhMN5J-pdRmUscNW8akLW4c7n7DFqk0uqHieJX2KC5BoCp2QQAvD_BwE
+
+- CodeCov (usage for code coverage with code report/feedback | https://docs.codecov.com/docs
+
+- Kubernetes Linter (Checks Kubernetes yml files against bad practices and security issues) | 
+https://docs.kubelinter.io/
+
+- Dependabot usage and documentation | https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions
