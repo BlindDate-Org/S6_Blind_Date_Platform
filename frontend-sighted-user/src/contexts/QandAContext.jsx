@@ -73,7 +73,12 @@ const QandAContextProvider = (props) => {
 
   const PostQuestion = async (question, topic, description) => {
     let response = await QuestionService.PostQuestion(question, topic, description);
-    if (topicList.includes(topic)) { SetMyFeedQuestions(response.data); }
+    let questions = response.data;
+    if (topicList.includes(topic)) {
+      const topics = selectedTopics.map(topic => topic.name);
+      const list = questions.filter(questions => topics.includes(questions.topics));
+      SetMyFeedQuestions(list);
+    }
   }
 
 
