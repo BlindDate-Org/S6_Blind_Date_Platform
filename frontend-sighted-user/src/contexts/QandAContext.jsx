@@ -1,6 +1,7 @@
 
 import React, { createContext, useEffect, useState } from 'react'
 import QuestionService from '../services/QuestionService'
+import AnswerService from '../services/AnswerService'
 export const QandAContext = createContext()
 
 
@@ -15,6 +16,8 @@ const QandAContextProvider = (props) => {
   const [selectedTab, SetSelectedTab] = useState(Tabs[0]);
   const [myFeedQuestions, SetMyFeedQuestions] = useState([]);
   const [selectedQuestion, SetSelectedQuestion] = useState({});
+  const [myFeedAnswers, SetMyFeedAnswers] = useState([]);
+  const [selectedAnswers, SetSelectedAnswers] = useState([]);
 
   //Switch Content Filter
   const SwitchTabsTo = (tabName) => {
@@ -26,29 +29,54 @@ const QandAContextProvider = (props) => {
     }
   }
 
-  //Get question detail 
+  //Get question detail
   const GetQuestionDetail = async (questionId) => {
     const question = await QuestionService.GetQuestion(questionId);
     SetSelectedQuestion(question)
     return question;
   }
 
+  const GetAnswersDetail = async (questionId) => {
+    const answers = await AnswerService.GetAnswersByQuestionId(questionId);
+    SetSelectedAnswers(answers)
+    return answers;
+  }
+
+  const PostQuestion = async (question, topic, description) => {
+    let response = await QuestionService.PostQuestion(question, topic, description);
+    SetMyFeedQuestions(response.data);
+  }
+
+
+  const DeleteQuestion = async (questionId) => {
+    let response = await QuestionService.DeleteQuestion(questionId);
+    if (response.status === 200) {
+      SetMyFeedQuestions([...myFeedQuestions.filter(questionId => questionId !== questionId), questionId]);
+    }
+  }
+
 
   //Get Feed Question List
   const GetFeedQuestionList = async () => {
-    let data = await QuestionService.GetMyFeedQuestionList();
-    SetMyFeedQuestions(data);
+    let questions = await QuestionService.GetMyFeedQuestionList();
+    SetMyFeedQuestions(questions);
+  }
+
+  const GetFeedAnswerList = async () => {
+    let answers = await AnswerService.GetAnswerList();
+    SetMyFeedAnswers(answers);
   }
 
 
 
   useEffect(() => {
     GetFeedQuestionList();
+    GetFeedAnswerList();
   }, [])
 
 
 
-  return <QandAContext.Provider value={{ myFeedQuestions, selectedTab, selectedQuestion, SwitchTabsTo, GetQuestionDetail }}>
+  return <QandAContext.Provider value={{ myFeedQuestions, selectedTab, selectedQuestion, myFeedAnswers, selectedAnswers, SwitchTabsTo, GetQuestionDetail, GetAnswersDetail, PostQuestion }}>
     {props.children}
   </QandAContext.Provider>
 }

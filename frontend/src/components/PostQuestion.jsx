@@ -1,20 +1,23 @@
-import React  from 'react';
+import React from "react";
 import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(Swal);
 
-const PostQuestion = ({onPost}) => {
-
+const PostQuestion = () => {
   const questionRef = React.useRef();
   const topicRef = React.useRef();
   const descriptionRef = React.useRef();
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+    Swal.fire('Question posted!', '', 'success')
+
     //The inputs from the post-question form
     const question = questionRef.current.value;
     const topic = topicRef.current.value;
     const description = descriptionRef.current.value;
-    onPost(question, topic, description);
-    Swal.fire('Question posted!', '', 'success')
+
+    //TODO: POST to backend
   };
   return (
     <>
@@ -22,7 +25,7 @@ const PostQuestion = ({onPost}) => {
         <label className="block text-left">
           Question
           <input
-
+          
             type="text"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline mb-5"
             ref={questionRef}

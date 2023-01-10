@@ -8,11 +8,12 @@ const QuestionDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { GetQuestionDetail } = useContext(QandAContext);
+  const { GetQuestionDetail, GetAnswersDetail } = useContext(QandAContext);
 
 
   useEffect(() => {
     GetQuestionDetail(id);
+    GetAnswersDetail(id);
   }, [id]);
 
 

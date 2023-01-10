@@ -16,7 +16,7 @@ const FeedQuestionsList = () => {
               id={question.id}
               title={question.title}
               topics={question.topics}
-              answers={question.answers}
+              // answers={question.answers}
             />
           );
         })}

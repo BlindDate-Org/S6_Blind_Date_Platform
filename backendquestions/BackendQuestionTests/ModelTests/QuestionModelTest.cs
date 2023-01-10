@@ -33,7 +33,7 @@ namespace BackendQuestionTests.ModelTests
 
             
 
-            Question question = new Question(questionId,topics,"Restaurant", "Looking for a nice restaurant for nice food",ownerId,answers, new DateTime(2010, 3, 11),false, 10);
+            Question question = new Question(questionId,topics,"Restaurant", "Looking for a nice restaurant for nice food",ownerId, new DateTime(2010, 3, 11),false, 10);
 
             //Assert
 

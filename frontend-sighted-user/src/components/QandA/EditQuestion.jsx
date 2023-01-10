@@ -72,7 +72,7 @@ const EditQuestion = (props) => {
         </label>
         <label className="block text-left ">
           Topic
-          {/* Later added if Topics is not a string
+          {/*//TODO Later added if Topics is not a string
           <Creatable
             isMulti
             options={options}

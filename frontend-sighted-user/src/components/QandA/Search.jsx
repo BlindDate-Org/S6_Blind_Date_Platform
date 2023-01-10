@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useContext } from "react";
 import { MagnifyingGlassIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import PostQuestion from './PostQuestion'
+import { QandAContext } from "../../contexts/QandAContext";
 
 const MySwal = withReactContent(Swal)
 
-const Search = () => {
+const openPostForm = (onPost) => {
+  MySwal.fire({
+    title: <p>Post a Question</p>,
+    html: <PostQuestion onPost={onPost} />,
+    showCloseButton: true,
+    showConfirmButton: false
+  });
+}
 
+
+const Search = () => {
+  const { PostQuestion } = useContext(QandAContext);
   const onSubmition = (e) => {
     e.preventDefault();
     //Get input value
@@ -17,6 +28,7 @@ const Search = () => {
     //Reset search input
     e.target.reset();
   }
+
   return (
     <div className='w-full flex'>
       <form className='flex-1' onSubmit={(e) => onSubmition(e)}>
@@ -29,18 +41,10 @@ const Search = () => {
           <button type="submit" className="search-btn">Search</button>
         </div>
       </form>
-      <button onClick={sweetalert} className='w-fit btn m-2 flex items-center'><PlusCircleIcon className='w-5' />New Question</button>
+      <button onClick={() => openPostForm(PostQuestion)} className='w-fit btn m-2 flex items-center'><PlusCircleIcon className='w-5' />New Question</button>
     </div>
   )
 }
 
-function sweetalert() {
-  MySwal.fire({
-    title: <p>Post a Question</p>,
-    html: <PostQuestion />,
-    showCloseButton: true,
-    showConfirmButton: false
-  });
-}
 
 export default Search
