@@ -27,7 +27,6 @@ const EditQuestion = (props) => {
 
   function onChangeTopics(event) {
     selectedTopics = event;
-    console.log("topics", selectedTopics);
   }
 
   const handleSubmit = (event) => {
@@ -37,14 +36,12 @@ const EditQuestion = (props) => {
     const question = questionRef.current.value;
     // const topics = selectedTopics;
     const topics = topicRef.current.value;
-    console.log("topics", topics);
     const description = descriptionRef.current.value;
 
     //TODO Fix Topics issue
     QuestionService.EditQuestion(questionId, question, topics, description)
       .then((result) => {
         const statusCode = result.status;
-        console.log(statusCode);
         if (statusCode == 200) {
           Swal.fire("Question Editted!", "", "success");
         }

@@ -16,7 +16,6 @@ export default class BaseHttpService {
 
     try {
       const response = await axios.get(`${this.BASE_URL}/${endpoint}`, options);
-      console.log("response  ", response);
       return response.data;
     } catch (error) {
       this._handleHttpError(error);
@@ -45,7 +44,6 @@ export default class BaseHttpService {
   }
 
   _handleHttpError(error) {
-    console.log("error: ", error);
     const { statusCode } = error.response.data;
 
     if (statusCode !== 401) {

@@ -1,21 +1,28 @@
-import React  from 'react';
+import React, { useState } from 'react';
 import Swal from "sweetalert2";
+import { topics } from '../../contexts/QandAContext'
 
-const PostQuestion = ({onPost}) => {
+import TopicCombox from './TopicCombox';
+
+const PostQuestion = ({ onPost }) => {
+
+  const [selectedTopic, setSelectedTopic] = useState(topics[0])
 
   const questionRef = React.useRef();
-  const topicRef = React.useRef();
   const descriptionRef = React.useRef();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    //The inputs from the post-question form
     const question = questionRef.current.value;
-    const topic = topicRef.current.value;
+    const topic = selectedTopic.name;
     const description = descriptionRef.current.value;
     onPost(question, topic, description);
     Swal.fire('Question posted!', '', 'success')
   };
+
+
+
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -29,9 +36,9 @@ const PostQuestion = ({onPost}) => {
             required
           />
         </label>
-        <label className="block text-left">
+        <label className="block text-left mb-1">
           Topic
-          <input type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline mb-5" ref={topicRef} required />
+          <TopicCombox selected={selectedTopic} setSelected={setSelectedTopic} />
         </label>
         <label className="block text-left">
           Description
@@ -42,7 +49,7 @@ const PostQuestion = ({onPost}) => {
           />
         </label>
         <input
-          className="swal2-confirm swal2-styled"
+          className="btn"
           type="submit"
           value="Submit"
         />
@@ -52,3 +59,4 @@ const PostQuestion = ({onPost}) => {
 };
 
 export default PostQuestion;
+

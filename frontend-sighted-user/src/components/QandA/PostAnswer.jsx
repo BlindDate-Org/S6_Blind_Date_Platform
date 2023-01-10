@@ -18,7 +18,6 @@ const PostAnswer = (props) => {
     AnswerService.PostAnswer(questionId, answer.toString())
       .then((result) => {
         const statusCode = result.status;
-        console.log(statusCode);
         if (statusCode == 200) {
           Swal.fire("Answer Posted!", "", "success");
         }

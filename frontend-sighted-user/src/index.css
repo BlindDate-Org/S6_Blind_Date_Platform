@@ -23,7 +23,7 @@
     @apply text-white bg-cyan-500 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2;
   }
   .topicTag {
-    @apply text-xs inline-flex items-center font-bold leading-3 uppercase px-3 mx-1 py-1 bg-blue-200 text-cyan-700 rounded-full;
+    @apply text-xs inline-flex items-center font-bold leading-3 px-3 mx-1 py-1 bg-blue-200 text-cyan-700 rounded-full;
   }
 }
 html {

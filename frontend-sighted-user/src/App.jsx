@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import { Home, Chat, QandA, Blog, QuestionDetailPage } from './pages';
 
+
+
 function App() {
   return (
     <div className="App flex justify-between items-center flex-col min-h-full">
