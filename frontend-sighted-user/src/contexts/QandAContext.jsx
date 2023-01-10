@@ -35,14 +35,16 @@ export const topics = [
   { id: 21, name: 'Gardening' },
   { id: 22, name: 'Pets' }
 ]
+const topicList = topics.map(topic => topic.name);
 
 const QandAContextProvider = (props) => {
+  const [selectedTopics, setSelectedTopics] = useState(topics);
   const [selectedTab, SetSelectedTab] = useState(Tabs[0]);
-  const [myFeedQuestions, SetMyFeedQuestions] = useState([]);
+  const [myFeedQuestions, SetMyFeedQuestions] = useState(topics);
   const [selectedQuestion, SetSelectedQuestion] = useState({});
   const [myFeedAnswers, SetMyFeedAnswers] = useState([]);
   const [selectedAnswers, SetSelectedAnswers] = useState([]);
-  const [selectedTopics, setSelectedTopics] = useState(topics);
+
 
   //Switch Content Filter
   const SwitchTabsTo = (tabName) => {
@@ -71,7 +73,7 @@ const QandAContextProvider = (props) => {
 
   const PostQuestion = async (question, topic, description) => {
     let response = await QuestionService.PostQuestion(question, topic, description);
-    SetMyFeedQuestions(response.data);
+    if (topicList.includes(topic)) { SetMyFeedQuestions(response.data); }
   }
 
 
@@ -99,11 +101,18 @@ const QandAContextProvider = (props) => {
     GetFeedAnswerList();
   }, [])
 
-  useEffect(() => {
-    console.log(selectedTopics)
-    //Call Api to topics
-  }, [selectedTopics])
 
+  const FilterQuestion = async () => {
+    let questions = await QuestionService.GetMyFeedQuestionList();
+    const topics = selectedTopics.map(topic => topic.name);
+    const list = questions.filter(questions => topics.includes(questions.topics));
+    SetMyFeedQuestions(list);
+  }
+
+
+  useEffect(() => {
+    FilterQuestion();
+  }, [selectedTopics])
 
 
   return <QandAContext.Provider value={{ myFeedQuestions, selectedTab, selectedQuestion, myFeedAnswers, selectedAnswers, selectedTopics, setSelectedTopics, SwitchTabsTo, GetQuestionDetail, GetAnswersDetail, PostQuestion }}>

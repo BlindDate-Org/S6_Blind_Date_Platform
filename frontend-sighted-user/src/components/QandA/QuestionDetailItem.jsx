@@ -27,11 +27,11 @@ const QuestionDetailItem = () => {
         </div>
         {/* menue for question */}
         <div className='w-30'>
-        <button onClick={ () => postAnswer(selectedQuestion.id)} className='hidden md:inline pr-2'><ChatBubbleBottomCenterTextIcon className='w-6 inline' />Answer</button>
+          <button onClick={() => postAnswer(selectedQuestion.id)} className='hidden md:inline pr-2'><ChatBubbleBottomCenterTextIcon className='w-6 inline' />Answer</button>
           <div className='hidden md:inline pr-2'><ExclamationTriangleIcon className='w-6 inline' />Report</div>
           <button onClick={() => editQuestion(selectedQuestion.id, selectedQuestion.title, selectedQuestion.topics, selectedQuestion.description)} className='hidden md:inline pr-2 text-orange-500 cursor-pointer'><PencilSquareIcon className='w-6 inline fill-orange-500' />Edit</button>
-          <button onClick={ () => deleteQuestion(selectedQuestion.id)} className='hidden md:inline pr-2 text-red-500'><TrashIcon className='w-6 inline fill-red-500' />Delete</button>
-          
+          <button onClick={() => deleteQuestion(selectedQuestion.id)} className='hidden md:inline pr-2 text-red-500'><TrashIcon className='w-6 inline fill-red-500' />Delete</button>
+
         </div>
       </div>
       <div>{selectedQuestion.description}</div>
@@ -52,7 +52,6 @@ function deleteQuestion(questionId) {
       QuestionService.DeleteQuestion(questionId)
         .then((result) => {
           const statusCode = result.status;
-          console.log(statusCode);
           if (statusCode == 200) {
             Swal.fire("Question Deleted!", "", "success");
           }
@@ -90,7 +89,7 @@ function postAnswer(questionId) {
     html: (
       <PostAnswer
         questionId={questionId}
-        
+
       />
     ),
     showCloseButton: true,

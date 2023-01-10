@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import PostQuestion from './PostQuestion'
 
+
 const MySwal = withReactContent(Swal)
 
 const openPostForm = (onPost) => {
@@ -78,7 +79,6 @@ const TopicFilter = () => {
       </div>
     </Combobox>
     <div className='pt-1'>
-      <p className='p-1'>Your faviorites topics:</p>
       {selectedTopics
         .map((topic) =>
           <div
@@ -88,13 +88,17 @@ const TopicFilter = () => {
             {topic.name}
           </div>)}
     </div>
-
   </div>
 }
 
 
 
 export default TopicFilter
+
+
+
+
+
 
 
 

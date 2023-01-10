@@ -24,7 +24,6 @@ const Search = () => {
     //Get input value
     let searchContent = e.target.elements[0].value;
     //TODO: request content
-    console.log(searchContent);
     //Reset search input
     e.target.reset();
   }

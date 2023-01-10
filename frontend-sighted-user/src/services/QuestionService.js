@@ -221,14 +221,13 @@
 import BaseHttpService from "./BaseHttpService";
 export class QuestionService extends BaseHttpService {
   async GetMyFeedQuestionList() {
-    const questions = this.get("api/Question/");
+    const questions = await this.get("api/Question/");
     return questions;
   }
   async GetQuestion(questionId) {
     const myFeedQuestion = this.get("api/Question/" + questionId);
     return myFeedQuestion;
   }
-  
   async PostQuestion(question, topics, description) {
     const myFeedQuestion = this.post("api/Question/", {"title": question, "topics": topics,"description": description});
     return myFeedQuestion;
@@ -243,6 +242,12 @@ export class QuestionService extends BaseHttpService {
     const response = this.delete("api/Question/" + questionId);
     return response;
   }
+  async GetQuestionByTopic(topic){
+    const response = await this.get("api/filter/"+topic);
+    return response
+  }
+
+
 }
 
 export default new QuestionService("QuestionService");
